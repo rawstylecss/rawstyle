@@ -7,19 +7,19 @@ export default (): Plugin => ({
 	name: 'rawstyle-vite',
 	enforce: 'pre',
 
-	resolveId: id => {
+	resolveId(id) {
 		if (id.startsWith(VIRTUAL_PREFIX))
 			return RESOLVED_PREFIX + id.slice(VIRTUAL_PREFIX.length)
 	},
 
-	load: id => {
+	load(id) {
 		if (id.startsWith(RESOLVED_PREFIX)) {
 			const cssId = id.slice(RESOLVED_PREFIX.length)
 			return styles.get(cssId)
 		}
 	},
 
-	transform: (code, id) => {
+	transform(code, id) {
 		if (!id.endsWith('.tsx')) return
 		const { transformedCode, extractedCss } = transform(id, code)
 		const cssId = id + '.css'
@@ -27,7 +27,7 @@ export default (): Plugin => ({
 		return `import "${VIRTUAL_PREFIX}${cssId}";${transformedCode}`
 	},
 
-	handleHotUpdate: async ({ file, server, modules, read }) => {
+	async handleHotUpdate({ file, server, modules, read }) {
 		if (!file.endsWith('.tsx')) return
 		const sourceCode = await read()
 		const { extractedCss } = transform(file, sourceCode)
