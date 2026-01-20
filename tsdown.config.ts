@@ -7,5 +7,4 @@ export default defineConfig({
 	sourcemap: isProd ? false : 'inline',
 	fixedExtension: false,
 	noExternal: /^\\@.+/,
-	dts: true,
 })
