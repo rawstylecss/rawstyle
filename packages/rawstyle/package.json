@@ -15,5 +15,9 @@
 		"build": "tsdown",
 		"build:watch": "tsdown --watch",
 		"build:prod": "tsdown --prod"
+	},
+	"dependencies": {
+		"@oxc-parser/binding-wasm32-wasi": "^0.110.0",
+		"oxc-parser": "^0.110.0"
 	}
 }
