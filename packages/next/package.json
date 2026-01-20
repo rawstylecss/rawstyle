@@ -1,0 +1,23 @@
+{
+	"name": "@rawstyle/next",
+	"version": "0.0.0",
+	"description": "🪶 Ultra‑light Compile‑time CSS‑in‑JS",
+	"author": "kh4f <kh4f.dev@gmail.com>",
+	"license": "MIT",
+	"repository": "https://github.com/kh4f/rawstyle",
+	"bugs": "https://github.com/kh4f/rawstyle/issues",
+	"homepage": "https://github.com/kh4f/rawstyle#readme",
+	"keywords": ["rawstyle", "rawstyle-next", "css-in-js", "next-plugin"],
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"type": "module",
+	"scripts": {
+		"build": "tsdown",
+		"build:watch": "tsdown --watch",
+		"build:prod": "tsdown --prod"
+	},
+	"peerDependencies": {
+		"rawstyle": "workspace:>=0",
+		"next": "*"
+	}
+}
