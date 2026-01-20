@@ -8,6 +8,9 @@ export const RESOLVED_PREFIX = `\0${VIRTUAL_PREFIX}`
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const css = (str: TemplateStringsArray) => ''
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const globals = (str: TemplateStringsArray) => null
+
 export const transform = (filePath: string, sourceCode: string): TransformResult => {
 	const { program } = parseSync(filePath, sourceCode)
 	const cssVars: CssVar[] = []
@@ -51,9 +54,17 @@ export const transform = (filePath: string, sourceCode: string): TransformResult
 			curRange = { start: 0, end: 0 }
 		},
 
+		ExpressionStatement(node) {
+			curRange = { start: node.start, end: node.end }
+		},
+
+		'ExpressionStatement:exit'() {
+			curRange = { start: 0, end: 0 }
+		},
+
 		TaggedTemplateExpression(node) {
 			const tag = node.tag
-			if (tag.type !== 'Identifier' || tag.name !== 'css') return
+			if (tag.type !== 'Identifier' || (tag.name !== 'css' && tag.name !== 'globals')) return
 
 			const template = node.quasi.quasis.map(q => q.value.cooked).join('')
 			cssVars.push({ name: lastId, tag: tag.name, template, start: curRange.start, end: curRange.end })
@@ -67,11 +78,17 @@ export const transform = (filePath: string, sourceCode: string): TransformResult
 
 	for (const cssVar of cssVars) {
 		let selector = ''
-		const className = `${cssVar.name}_${fileHash}`
-		selector = `.${className}`
-		const classNameId = classNameIds.find(cn => cn.name === cssVar.name)
-		if (!classNameId) continue
-		replacements.push({ start: classNameId.start, end: classNameId.end, replacement: `'${className}'` })
+
+		if (cssVar.tag === 'globals') {
+			selector = ':root'
+		} else if (cssVar.tag === 'css') {
+			const className = `${cssVar.name}_${fileHash}`
+			selector = `.${className}`
+			const classNameId = classNameIds.find(cn => cn.name === cssVar.name)
+			if (!classNameId) continue
+			replacements.push({ start: classNameId.start, end: classNameId.end, replacement: `'${className}'` })
+		}
+
 		extractedCss += `${selector}{${cssVar.template}}`
 	}
 
