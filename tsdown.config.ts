@@ -6,5 +6,4 @@ export default {
 	minify: isProd,
 	sourcemap: isProd ? false : 'inline',
 	fixedExtension: false,
-	noExternal: /^\\@.+/,
 } satisfies UserConfig
