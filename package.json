@@ -4,7 +4,7 @@
 		"build": "pnpm -r build",
 		"build:watch": "pnpm -r build:watch",
 		"build:prod": "pnpm -r build:prod",
-		"lint": "eslint"
+		"lint": "pnpm -r lint"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.39.2",

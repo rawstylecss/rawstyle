@@ -13,7 +13,8 @@
 	"scripts": {
 		"build": "tsdown",
 		"build:watch": "tsdown --watch",
-		"build:prod": "tsdown --prod"
+		"build:prod": "tsdown --prod",
+		"lint": "eslint"
 	},
 	"dependencies": {
 		"@clack/prompts": "^0.11.0",
