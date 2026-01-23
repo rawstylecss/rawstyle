@@ -8,12 +8,15 @@
 	"bugs": "https://github.com/kh4f/rawstyle/issues",
 	"homepage": "https://github.com/kh4f/rawstyle#readme",
 	"keywords": ["rawstyle", "create-rawstyle", "css-in-js"],
+	"relion": { "tagPrefix": "create-rawstyle" },
 	"main": "dist/index.js",
 	"type": "module",
 	"scripts": {
 		"build": "tsdown",
 		"build:watch": "tsdown --watch",
 		"build:prod": "tsdown --prod",
+		"release:context": "pnpm relion -f",
+		"release": "pnpm relion -bct",
 		"lint": "eslint"
 	},
 	"dependencies": {
