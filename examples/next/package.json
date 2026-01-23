@@ -6,7 +6,8 @@
 		"dev": "next",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint"
+		"lint": "eslint",
+		"prepare": "next-dont"
 	},
 	"dependencies": {
 		"next": "^16.1.4",
@@ -28,6 +29,7 @@
 		"eslint-plugin-react": "^7.37.5",
 		"eslint-plugin-react-hooks": "^7.0.1",
 		"jiti": "^2.6.1",
+		"next-dont": "^0.1.3",
 		"rawstyle": "link:..\\..\\packages\\rawstyle",
 		"tsx": "^4.21.0",
 		"typescript": "^5.9.3",
