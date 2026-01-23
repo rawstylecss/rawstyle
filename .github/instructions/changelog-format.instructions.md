@@ -18,7 +18,7 @@
 ```
 
 ### Brief
-A brief title of the change in 2-4 words.
+A brief title of the change in 2–4 words as either a noun phrase (e.g., "Auto‑scrolling during drag") or a past‑participle phrase (e.g., "Updated drag handle icon").
 
 ### Description
 A concise description of the change for end-users in sentence format.
