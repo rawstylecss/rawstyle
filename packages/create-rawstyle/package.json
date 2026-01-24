@@ -9,6 +9,7 @@
 	"homepage": "https://github.com/rawstylecss/rawstyle#readme",
 	"keywords": ["rawstyle", "create-rawstyle", "css-in-js"],
 	"relion": { "tagPrefix": "create-rawstyle@" },
+	"files": ["dist"],
 	"main": "dist/index.js",
 	"type": "module",
 	"scripts": {

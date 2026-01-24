@@ -9,6 +9,7 @@
 	"homepage": "https://github.com/rawstylecss/rawstyle#readme",
 	"keywords": ["rawstyle", "rawstyle-vite", "css-in-js", "vite-plugin"],
 	"relion": { "tagPrefix": "@rawstyle/vite@" },
+	"files": ["dist"],
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"type": "module",
