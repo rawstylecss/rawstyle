@@ -4,7 +4,7 @@
 ## &ensp; [` 📦 create-rawstyle@0.1.1  `](https://github.com/rawstylecss/rawstyle/compare/create-rawstyle@0.1.0...create-rawstyle@0.1.1)
 
 ### &emsp; ⚙️ Internal
-- **Restricted published files**: only the `dist` directory and essential files are now included in the published tarball.
+- **Restricted published files**: only the `dist` directory and essential files are now included in the published tarball. [🡥](https://github.com/rawstylecss/rawstyle/commit/514e2ed)
 
 ##### &emsp;&emsp; [_Full Changelog_](https://github.com/rawstylecss/rawstyle/compare/create-rawstyle@0.1.0...create-rawstyle@0.1.1) &ensp;•&ensp; _Jan 24, 2026_
 
