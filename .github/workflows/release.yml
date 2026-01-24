@@ -26,9 +26,10 @@ jobs:
 
       - name: Set env variables
         run: |
-          [[ $TAG =~ ([^/@]+)@ ]] && echo PACKAGE=${BASH_REMATCH[1]} >> $GITHUB_ENV
-          echo VERSION=${TAG#*@} >> $GITHUB_ENV
-          echo ARCHIVE=${PACKAGE/@rawstyle\//rawstyle}-v$VERSION >> $GITHUB_ENV
+          [[ $TAG =~ ([^/@]+)@ ]] && PACKAGE=${BASH_REMATCH[1]}
+          VERSION=${TAG#*@}
+          ARCHIVE=${PACKAGE/@rawstyle\//rawstyle}-v$VERSION
+          echo -e "PACKAGE=$PACKAGE\nVERSION=$VERSION\nARCHIVE=$ARCHIVE" >> $GITHUB_ENV
 
       - name: Install deps
         run: pnpm install
