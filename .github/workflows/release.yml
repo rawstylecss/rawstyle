@@ -47,7 +47,7 @@ jobs:
           cp ../../LICENSE .
           zip -r $ARCHIVE dist package.json LICENSE \
             $([[ $PACKAGE == "rawstyle" ]] && cp ../../README.md . && echo README.md || true)
-          rm LICENSE README.md 2>/dev/null
+          rm -f LICENSE README.md
 
       - name: Create GitHub release
         working-directory: packages/${{ env.PACKAGE }}
