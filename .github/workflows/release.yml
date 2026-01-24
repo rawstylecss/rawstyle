@@ -28,7 +28,7 @@ jobs:
         run: |
           [[ $TAG =~ ([^/@]+)@ ]] && PACKAGE=${BASH_REMATCH[1]}
           VERSION=${TAG#*@}
-          ARCHIVE=${PACKAGE/@rawstyle\//rawstyle}-v$VERSION
+          ARCHIVE=${PACKAGE/@rawstyle\//rawstyle}-v$VERSION.zip
           echo -e "PACKAGE=$PACKAGE\nVERSION=$VERSION\nARCHIVE=$ARCHIVE" >> $GITHUB_ENV
 
       - name: Install deps
