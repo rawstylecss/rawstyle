@@ -30,7 +30,7 @@ jobs:
           PACKAGE=${BASH_REMATCH[1]}
           DIR=${BASH_REMATCH[3]}
           VERSION=${BASH_REMATCH[4]}
-          ARCHIVE=${PACKAGE/@rawstyle\//rawstyle}-v$VERSION.zip
+          ARCHIVE=${PACKAGE/@rawstyle\//rawstyle-}-v$VERSION.zip
           echo -e "DIR=$DIR\nPACKAGE=$PACKAGE\nVERSION=$VERSION\nARCHIVE=$ARCHIVE" >> $GITHUB_ENV
 
       - name: Install deps
