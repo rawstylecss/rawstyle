@@ -17,9 +17,8 @@
 		"build": "tsdown",
 		"build:watch": "tsdown --watch",
 		"build:prod": "tsdown --prod",
-		"release:context": "relion -f",
-		"release": "relion -bct",
-		"lint": "eslint"
+		"lint": "eslint",
+		"release": "relion"
 	},
 	"peerDependencies": {
 		"rawstyle": "workspace:>=0",

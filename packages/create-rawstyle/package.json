@@ -16,9 +16,8 @@
 		"build": "tsdown",
 		"build:watch": "tsdown --watch",
 		"build:prod": "tsdown --prod",
-		"release:context": "relion -f",
-		"release": "relion -bct",
-		"lint": "eslint"
+		"lint": "eslint",
+		"release": "relion"
 	},
 	"dependencies": {
 		"@clack/prompts": "^0.11.0",
