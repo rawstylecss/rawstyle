@@ -46,7 +46,7 @@ jobs:
         run: |
           cp ../../LICENSE .
           zip -r $ARCHIVE dist package.json LICENSE \
-            $([[ $PACKAGE == "rawstyle" ]] && cp ../../README.md . && echo README.md)
+            $([[ $PACKAGE == "rawstyle" ]] && cp ../../README.md . && echo README.md || true)
           rm LICENSE README.md 2>/dev/null
 
       - name: Create GitHub release
