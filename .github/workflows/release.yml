@@ -27,7 +27,7 @@ jobs:
       - name: Set env variables
         run: |
           [[ $TAG =~ ([^/@]+)@ ]] && PACKAGE=${BASH_REMATCH[1]}
-          VERSION=${TAG#*@}
+          VERSION=${TAG##*@}
           ARCHIVE=${PACKAGE/@rawstyle\//rawstyle}-v$VERSION.zip
           echo -e "PACKAGE=$PACKAGE\nVERSION=$VERSION\nARCHIVE=$ARCHIVE" >> $GITHUB_ENV
 
