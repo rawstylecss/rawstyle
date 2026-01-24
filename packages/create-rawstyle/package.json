@@ -8,7 +8,7 @@
 	"bugs": "https://github.com/rawstylecss/rawstyle/issues",
 	"homepage": "https://github.com/rawstylecss/rawstyle#readme",
 	"keywords": ["rawstyle", "create-rawstyle", "css-in-js"],
-	"relion": { "tagPrefix": "create-rawstyle" },
+	"relion": { "tagPrefix": "create-rawstyle@" },
 	"main": "dist/index.js",
 	"type": "module",
 	"scripts": {
