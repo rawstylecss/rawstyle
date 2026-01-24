@@ -26,10 +26,12 @@ jobs:
 
       - name: Set env variables
         run: |
-          [[ $TAG =~ ([^/@]+)@ ]] && DIR=${BASH_REMATCH[1]}
-          VERSION=${TAG##*@}
-          ARCHIVE=${DIR/@rawstyle\//rawstyle}-v$VERSION.zip
-          echo -e "DIR=$DIR\nVERSION=$VERSION\nARCHIVE=$ARCHIVE" >> $GITHUB_ENV
+          [[ $TAG =~ ^((@.+?\/)?(.+))@(.+)$ ]]
+          PACKAGE=${BASH_REMATCH[1]}
+          DIR=${BASH_REMATCH[3]}
+          VERSION=${BASH_REMATCH[4]}
+          ARCHIVE=${PACKAGE/@rawstyle\//rawstyle}-v$VERSION.zip
+          echo -e "DIR=$DIR\nPACKAGE=$PACKAGE\nVERSION=$VERSION\nARCHIVE=$ARCHIVE" >> $GITHUB_ENV
 
       - name: Install deps
         run: pnpm install
