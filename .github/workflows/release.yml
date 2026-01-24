@@ -26,10 +26,10 @@ jobs:
 
       - name: Set env variables
         run: |
-          [[ $TAG =~ ([^/@]+)@ ]] && PACKAGE=${BASH_REMATCH[1]}
+          [[ $TAG =~ ([^/@]+)@ ]] && DIR=${BASH_REMATCH[1]}
           VERSION=${TAG##*@}
-          ARCHIVE=${PACKAGE/@rawstyle\//rawstyle}-v$VERSION.zip
-          echo -e "PACKAGE=$PACKAGE\nVERSION=$VERSION\nARCHIVE=$ARCHIVE" >> $GITHUB_ENV
+          ARCHIVE=${DIR/@rawstyle\//rawstyle}-v$VERSION.zip
+          echo -e "DIR=$DIR\nVERSION=$VERSION\nARCHIVE=$ARCHIVE" >> $GITHUB_ENV
 
       - name: Install deps
         run: pnpm install
@@ -38,25 +38,25 @@ jobs:
         run: pnpm build:prod
 
       - name: Lint
-        working-directory: packages/${{ env.PACKAGE }}
+        working-directory: packages/${{ env.DIR }}
         run: pnpm lint
 
       - name: Create release archive
-        working-directory: packages/${{ env.PACKAGE }}
+        working-directory: packages/${{ env.DIR }}
         run: |
           cp ../../LICENSE .
           zip -r $ARCHIVE dist package.json LICENSE \
-            $([[ $PACKAGE == "rawstyle" ]] && cp ../../README.md . && echo README.md || true)
+            $([[ $DIR == "rawstyle" ]] && cp ../../README.md . && echo README.md || true)
           rm -f LICENSE README.md
 
       - name: Create GitHub release
-        working-directory: packages/${{ env.PACKAGE }}
+        working-directory: packages/${{ env.DIR }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release create $TAG --title $TAG --draft $ARCHIVE
 
       - name: Publish to npm
-        working-directory: packages/${{ env.PACKAGE }}
+        working-directory: packages/${{ env.DIR }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm publish --access public --provenance
