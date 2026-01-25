@@ -10,7 +10,7 @@ export const RESOLVED_PREFIX = `\0${VIRTUAL_PREFIX}`
 export const css = (str: TemplateStringsArray) => ''
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const globals = (str: TemplateStringsArray) => null
+export const gcss = (str: TemplateStringsArray) => null
 
 export const transform = (file: string, source: string): TransformResult => {
 	const { program } = parseSync(file, source)
@@ -65,7 +65,7 @@ export const transform = (file: string, source: string): TransformResult => {
 
 		TaggedTemplateExpression(node) {
 			const tag = node.tag
-			if (tag.type !== 'Identifier' || (tag.name !== 'css' && tag.name !== 'globals')) return
+			if (tag.type !== 'Identifier' || (tag.name !== 'css' && tag.name !== 'gcss')) return
 
 			const template = node.quasi.quasis.map(q => q.value.cooked).join('')
 			cssVars.push({ name: lastId, tag: tag.name, template, start: curRange.start, end: curRange.end })
@@ -80,7 +80,7 @@ export const transform = (file: string, source: string): TransformResult => {
 	for (const cssVar of cssVars) {
 		let selector = ''
 
-		if (cssVar.tag === 'globals') {
+		if (cssVar.tag === 'gcss') {
 			selector = ':root'
 		} else if (cssVar.tag === 'css') {
 			const className = `${cssVar.name}_${hash}`
