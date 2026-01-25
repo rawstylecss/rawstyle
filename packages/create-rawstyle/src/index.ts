@@ -21,7 +21,7 @@ void (async () => {
 
 	const s = spinner()
 	s.start('Scaffolding project...')
-	await downloadTemplate(`gh:kh4f/rawstyle/examples/${platform}`, { dir: projectName })
+	await downloadTemplate(`gh:rawstylecss/rawstyle/examples/${platform}`, { dir: projectName })
 	await resolveLinkedDeps(projectName)
 	s.stop('Project scaffolded successfully')
 
