@@ -1,6 +1,6 @@
-import { intro, select, spinner, text } from '@clack/prompts'
+import { intro, select, spinner, text, outro } from '@clack/prompts'
 import { downloadTemplate } from 'giget'
-import { handleCancel } from '@/utils'
+import { handleCancel, resolveLinkedDeps } from '@/utils'
 
 void (async () => {
 	console.log()
@@ -22,5 +22,8 @@ void (async () => {
 	const s = spinner()
 	s.start('Scaffolding project...')
 	await downloadTemplate(`gh:kh4f/rawstyle/examples/${platform}`, { dir: projectName })
-	s.stop('Done!')
+	await resolveLinkedDeps(projectName)
+	s.stop('Project scaffolded successfully')
+
+	outro('Done!')
 })()
