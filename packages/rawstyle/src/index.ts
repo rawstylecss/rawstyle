@@ -12,8 +12,8 @@ export const css = (str: TemplateStringsArray) => ''
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const globals = (str: TemplateStringsArray) => null
 
-export const transform = (filePath: string, sourceCode: string): TransformResult => {
-	const { program } = parseSync(filePath, sourceCode)
+export const transform = (file: string, source: string): TransformResult => {
+	const { program } = parseSync(file, source)
 	const cssVars: CssVar[] = []
 	const classNameIds: ClassNameId[] = []
 	const replacements: Replacement[] = []
@@ -73,8 +73,8 @@ export const transform = (filePath: string, sourceCode: string): TransformResult
 		},
 	}).visit(program)
 
-	let transformedCode = sourceCode
-	const fileHash = generateHash(filePath)
+	let transformedCode = source
+	const fileHash = generateHash(file)
 	let extractedCss = ''
 
 	for (const cssVar of cssVars) {
