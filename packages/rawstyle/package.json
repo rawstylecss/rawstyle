@@ -10,9 +10,11 @@
 	"keywords": ["rawstyle", "rawstyle-core", "css-in-js"],
 	"relion": { "tagPrefix": "rawstyle@" },
 	"files": ["dist", "README.md"],
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
 	"type": "module",
+	"exports": {
+		".": { "import": "./dist/index.js","types": "./dist/index.d.ts" },
+		"./globals": { "types": "./dist/globals.d.ts" }
+	},
 	"scripts": {
 		"build": "tsdown",
 		"build:watch": "tsdown --watch",
