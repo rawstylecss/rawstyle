@@ -78,19 +78,15 @@ export const transform = (file: string, source: string): TransformResult => {
 	let extractedCss = ''
 
 	for (const cssVar of cssVars) {
-		let selector = ''
-
 		if (cssVar.tag === 'gcss') {
-			selector = ':root'
+			extractedCss += cssVar.template
 		} else if (cssVar.tag === 'css') {
 			const className = `${cssVar.name}_${hash}`
-			selector = `.${className}`
 			const classNameId = classNameIds.find(cn => cn.name === cssVar.name)
 			if (!classNameId) continue
 			replacements.push({ start: classNameId.start, end: classNameId.end, replacement: `'${className}'` })
+			extractedCss += `.${className}{${cssVar.template}}`
 		}
-
-		extractedCss += `${selector}{${cssVar.template}}`
 	}
 
 	replacements.sort((a, b) => b.start - a.start)
