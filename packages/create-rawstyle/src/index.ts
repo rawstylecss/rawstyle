@@ -23,7 +23,7 @@ void (async () => {
 	s.start('Scaffolding project...')
 	await downloadTemplate(`gh:rawstylecss/rawstyle/examples/${platform}`, { dir: projectName })
 	await resolveLinkedDeps(projectName)
-	s.stop('Project scaffolded successfully')
+	s.stop('Project scaffolded successfully!')
 
-	outro('Done!')
+	outro('Done')
 })()
