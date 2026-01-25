@@ -73,8 +73,8 @@ export const transform = (file: string, source: string): TransformResult => {
 		},
 	}).visit(program)
 
-	let transformedCode = source
-	const fileHash = generateHash(file)
+	let transformed = source
+	const hash = generateHash(file)
 	let extractedCss = ''
 
 	for (const cssVar of cssVars) {
@@ -83,7 +83,7 @@ export const transform = (file: string, source: string): TransformResult => {
 		if (cssVar.tag === 'globals') {
 			selector = ':root'
 		} else if (cssVar.tag === 'css') {
-			const className = `${cssVar.name}_${fileHash}`
+			const className = `${cssVar.name}_${hash}`
 			selector = `.${className}`
 			const classNameId = classNameIds.find(cn => cn.name === cssVar.name)
 			if (!classNameId) continue
@@ -95,7 +95,7 @@ export const transform = (file: string, source: string): TransformResult => {
 
 	replacements.sort((a, b) => b.start - a.start)
 
-	for (const rep of replacements) transformedCode = transformedCode.slice(0, rep.start) + rep.replacement + transformedCode.slice(rep.end)
+	for (const rep of replacements) transformed = transformed.slice(0, rep.start) + rep.replacement + transformed.slice(rep.end)
 
-	return { transformedCode, extractedCss }
+	return { transformedCode: transformed, extractedCss }
 }
