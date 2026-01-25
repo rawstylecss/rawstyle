@@ -2,6 +2,7 @@ import { parseSync, Visitor } from 'oxc-parser'
 import { generateHash } from '@/utils'
 import type { TransformResult, ClassNameId, CssVar, Replacement } from '@/types'
 
+export const TRANSFORMABLE_EXTENSIONS = ['.tsx']
 export const VIRTUAL_PREFIX = 'virtual:rawstyle/'
 export const RESOLVED_PREFIX = `\0${VIRTUAL_PREFIX}`
 
