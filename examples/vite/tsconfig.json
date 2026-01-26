@@ -9,6 +9,7 @@
 		"moduleDetection": "force",
 		"jsx": "react-jsx",
 		"paths": { "@/*": ["./src/*"] },
+		"types": ["rawstyle/globals"]
 	},
 	"include": ["**/*.ts", "**/*.tsx"]
 }

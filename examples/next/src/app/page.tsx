@@ -1,5 +1,3 @@
-import { css } from 'rawstyle'
-
 export default function App() {
 	return <h1 className={title}>Rawstyle<br/>Next</h1>
 }
