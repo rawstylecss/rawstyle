@@ -1,5 +1,5 @@
 import type { Plugin } from 'rolldown-vite'
-import { transform, VIRTUAL_PREFIX, RESOLVED_PREFIX } from 'rawstyle'
+import { transform, TRANSFORMABLE_EXT, VIRTUAL_PREFIX, RESOLVED_PREFIX } from 'rawstyle'
 
 const styles = new Map<string, string>()
 
@@ -20,7 +20,7 @@ export default (): Plugin => ({
 	},
 
 	transform(code, id) {
-		if (!id.endsWith('.tsx')) return
+		if (!TRANSFORMABLE_EXT.test(id)) return
 		const { transformed, css } = transform(id, code)
 		const cssId = id + '.css'
 		styles.set(cssId, css)
@@ -28,7 +28,7 @@ export default (): Plugin => ({
 	},
 
 	async handleHotUpdate({ file, server, modules, read }) {
-		if (!file.endsWith('.tsx')) return
+		if (!TRANSFORMABLE_EXT.test(file)) return
 		const sourceCode = await read()
 		const { css } = transform(file, sourceCode)
 		const cssId = file + '.css'
