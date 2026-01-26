@@ -24,7 +24,7 @@ export default (): Plugin => ({
 		const { transformed, css } = transform(id, code)
 		const cssId = id + '.css'
 		styles.set(cssId, css)
-		return `import "${VIRTUAL_PREFIX}${cssId}";${transformed}`
+		return `import '${VIRTUAL_PREFIX}${cssId}';${transformed}`
 	},
 
 	async handleHotUpdate({ file, server, modules, read }) {
