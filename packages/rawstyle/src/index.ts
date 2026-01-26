@@ -92,9 +92,11 @@ export const transform = (file: string, source: string): TransformResult => {
 			extractedCss += cssVar.template
 		} else if (cssVar.tag === 'css') {
 			const className = `${cssVar.name}_${hash}`
-			const classNameId = classNameIds.find(cn => cn.name === cssVar.name)
-			if (!classNameId) continue
-			replacements.push({ start: classNameId.start, end: classNameId.end, replacement: `'${className}'` })
+			const cnIds = classNameIds.filter(cn => cn.name === cssVar.name)
+			if (!cnIds.length) continue
+			for (const classNameId of cnIds) {
+				replacements.push({ start: classNameId.start, end: classNameId.end, replacement: `'${className}'` })
+			}
 			extractedCss += `.${className}{${cssVar.template}}`
 		}
 	}
