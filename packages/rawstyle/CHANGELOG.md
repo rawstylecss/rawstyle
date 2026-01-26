@@ -1,6 +1,25 @@
 # Changelog
 
 
+## &ensp; [` 📦 rawstyle@0.2.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.1.0...rawstyle@0.2.0)
+
+### &emsp; 🧨 BREAKING CHANGES
+- **Renamed `TransformResult` fields**: the `TransformResult` interface now uses `transformed` and `css` fields instead of `transformedCode` and `extractedCss`. [🡥](https://github.com/rawstylecss/rawstyle/commit/42d7d6e)
+- **No implicit `:root` in `gcss`**: the `gcss` template no longer wraps content in `:root` by default. [🡥](https://github.com/rawstylecss/rawstyle/commit/2dda221)
+- **Renamed `globals` to `gcss`**: the global CSS template tag has been renamed from `globals` to `gcss`. [🡥](https://github.com/rawstylecss/rawstyle/commit/f806102)
+
+### &emsp; 🎁 Features
+- **Conditional class name utility**: added a `cn` function for convenient conditional joining of multiple class names. [🡥](https://github.com/rawstylecss/rawstyle/commit/7ffdac9)
+- **Global types**: added `rawstyle/globals` types entry for global usage of `css`, `gcss`, and `cn` functions, available via `/// <reference types="rawstyle/globals" />` or `tsconfig.types`. [🡥](https://github.com/rawstylecss/rawstyle/commit/fdc90bc)
+- **Exposed `TRANSFORMABLE_EXT`**: the `TRANSFORMABLE_EXT` constant is now available for plugin usage. [🡥](https://github.com/rawstylecss/rawstyle/commit/04023bb)
+- **Expanded supported transformable extensions**: included `.jsx`, `.ts`, and `.js` in `TRANSFORMABLE_EXT` for broader file support. [🡥](https://github.com/rawstylecss/rawstyle/commit/0342b9e)
+
+### &emsp; 🩹 Fixes
+- **Multiple className references handling**: all occurrences of a `cssVar` in `className` are now replaced, not just the first match. [🡥](https://github.com/rawstylecss/rawstyle/commit/857bb18)
+
+##### &emsp;&emsp; [_Full Changelog_](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.1.0...rawstyle@0.2.0) &ensp;•&ensp; _Jan 26, 2026_
+
+
 ## &ensp; [` 📦 rawstyle@0.1.0  `](https://github.com/rawstylecss/rawstyle/commits/rawstyle@0.1.0)
 
 ### &emsp; 🎁 Features
