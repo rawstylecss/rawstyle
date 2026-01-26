@@ -1,6 +1,6 @@
 {
 	"name": "@rawstyle/next",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "🪶 Ultra‑light Compile‑time CSS‑in‑JS",
 	"author": "kh4f <kh4f.dev@gmail.com>",
 	"license": "MIT",
