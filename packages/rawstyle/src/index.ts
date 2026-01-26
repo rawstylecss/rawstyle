@@ -12,6 +12,9 @@ export const css = (str: TemplateStringsArray) => ''
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const gcss = (str: TemplateStringsArray) => null
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const cn = (...classes: (string | boolean)[]) => ''
+
 export const transform = (file: string, source: string): TransformResult => {
 	const { program } = parseSync(file, source)
 	const cssVars: CssVar[] = []
@@ -25,6 +28,13 @@ export const transform = (file: string, source: string): TransformResult => {
 		ImportDeclaration(node) {
 			if (node.source.value === 'rawstyle')
 				replacements.push({ start: node.start, end: node.end, replacement: '' })
+		},
+
+		CallExpression(node) {
+			if (node.callee.type === 'Identifier' && node.callee.name === 'cn') {
+				replacements.push({ start: node.start, end: node.start + 3, replacement: '[' })
+				replacements.push({ start: node.end - 1, end: node.end, replacement: '].filter(Boolean).join(\' \')' })
+			}
 		},
 
 		JSXAttribute(node) {
