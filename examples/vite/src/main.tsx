@@ -6,8 +6,8 @@ if (root) createRoot(root).render(<App/>)
 
 void gcss`
 	:root {
-		--background: #d5cdc0;
-		--foreground: #41342a;
+		--background: #ebebeb;
+		--foreground: #303030;
 	}
 
 	body {

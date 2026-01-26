@@ -14,8 +14,8 @@ export default function RootLayout({ children}: Readonly<{ children: React.React
 
 void gcss`
 	:root {
-		--background: #d5cdc0;
-		--foreground: #41342a;
+		--background: #ebebeb;
+		--foreground: #303030;
 	}
 
 	body {
