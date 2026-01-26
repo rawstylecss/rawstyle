@@ -2,7 +2,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "pnpm -r build",
-		"build:watch": "pnpm -r build:watch",
+		"build:watch": "pnpm -r --parallel build:watch",
 		"build:prod": "pnpm -r build:prod",
 		"lint": "pnpm -r lint"
 	},
