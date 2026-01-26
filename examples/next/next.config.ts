@@ -1,8 +1,6 @@
 import { rawstyleTurboRule } from '@rawstyle/next'
 import type { NextConfig } from 'next'
 
-const nextConfig: NextConfig = {
+export default {
 	turbopack: { rules: { ...rawstyleTurboRule } },
-}
-
-export default nextConfig
+} satisfies NextConfig
