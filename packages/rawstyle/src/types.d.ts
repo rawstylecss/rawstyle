@@ -3,13 +3,13 @@ export interface TransformResult {
 	extractedCss: string
 }
 
-export interface ClassNameId {
+export interface CssVarRef {
 	name: string
 	start: number
 	end: number
 }
 
-export interface CssVar {
+export interface CssVarDecl {
 	name: string
 	tag: string
 	template: string
