@@ -21,20 +21,20 @@ export default (): Plugin => ({
 
 	transform(code, id) {
 		if (!id.endsWith('.tsx')) return
-		const { transformedCode, extractedCss } = transform(id, code)
+		const { transformed, css } = transform(id, code)
 		const cssId = id + '.css'
-		styles.set(cssId, extractedCss)
-		return `import "${VIRTUAL_PREFIX}${cssId}";${transformedCode}`
+		styles.set(cssId, css)
+		return `import "${VIRTUAL_PREFIX}${cssId}";${transformed}`
 	},
 
 	async handleHotUpdate({ file, server, modules, read }) {
 		if (!file.endsWith('.tsx')) return
 		const sourceCode = await read()
-		const { extractedCss } = transform(file, sourceCode)
+		const { css } = transform(file, sourceCode)
 		const cssId = file + '.css'
 		const virtualId = RESOLVED_PREFIX + cssId
 		const mod = server.moduleGraph.getModuleById(virtualId)
-		styles.set(cssId, extractedCss)
+		styles.set(cssId, css)
 		if (mod) return [...modules, mod]
 	},
 })

@@ -21,7 +21,7 @@
 		"release": "relion"
 	},
 	"peerDependencies": {
-		"rawstyle": "workspace:>=0",
+		"rawstyle": "workspace:>=0.2",
 		"rolldown-vite": "*"
 	}
 }
