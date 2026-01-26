@@ -1,7 +1,8 @@
+import { rawstyleTurboRule } from '@rawstyle/next'
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-	turbopack: { rules: { '**/*.tsx': { loaders: ['@rawstyle/next'] } } },
+	turbopack: { rules: { ...rawstyleTurboRule } },
 }
 
 export default nextConfig

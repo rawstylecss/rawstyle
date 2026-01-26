@@ -1,4 +1,12 @@
-import { transform } from 'rawstyle'
+import { transform, TRANSFORMABLE_EXT } from 'rawstyle'
+import type { NextConfig } from 'next'
+
+export const rawstyleTurboRule: Required<Required<NextConfig>['turbopack']>['rules'] = {
+	'*': {
+		loaders: ['@rawstyle/next'],
+		condition: { all: [{ not: 'foreign' }, { path: TRANSFORMABLE_EXT }] },
+	},
+}
 
 export default function (this: { resourcePath: string }, source: string): string {
 	const { transformed, css } = transform(this.resourcePath, source)
