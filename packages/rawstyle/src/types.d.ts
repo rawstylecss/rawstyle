@@ -1,6 +1,6 @@
 export interface TransformResult {
-	transformedCode: string
-	extractedCss: string
+	transformed: string
+	css: string
 }
 
 export interface CssVarRef {

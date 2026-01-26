@@ -85,17 +85,17 @@ export const transform = (file: string, source: string): TransformResult => {
 
 	let transformed = source
 	const hash = generateHash(file)
-	let extractedCss = ''
+	let css = ''
 
 	for (const cssVar of cssVarDecls) {
 		if (cssVar.tag === 'gcss') {
-			extractedCss += cssVar.template
+			css += cssVar.template
 		} else if (cssVar.tag === 'css') {
 			const className = `${cssVar.name}_${hash}`
 			const refs = cssVarRefs.filter(ref => ref.name === cssVar.name)
 			if (!refs.length) continue
 			for (const ref of refs) replacements.push({ start: ref.start, end: ref.end, replacement: `'${className}'` })
-			extractedCss += `.${className}{${cssVar.template}}`
+			css += `.${className}{${cssVar.template}}`
 		}
 	}
 
@@ -103,5 +103,5 @@ export const transform = (file: string, source: string): TransformResult => {
 
 	for (const rep of replacements) transformed = transformed.slice(0, rep.start) + rep.replacement + transformed.slice(rep.end)
 
-	return { transformedCode: transformed, extractedCss }
+	return { transformed, css }
 }
