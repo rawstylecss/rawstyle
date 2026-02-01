@@ -9,10 +9,8 @@ export const RESOLVED_PREFIX = `\0${VIRTUAL_PREFIX}`
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const css = (str: TemplateStringsArray) => ''
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const gcss = (str: TemplateStringsArray) => null
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const cn = (...classes: (string | boolean)[]) => ''
 
