@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 rawstyle@0.3.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.2.0...rawstyle@0.3.0)
+
+### &emsp; 🎁 Features
+- **Tagged template pattern export**: added `TEMPLATE_PATTERN` export to enable consistent detection of Rawstyle tagged templates across related projects. [🡥](https://github.com/rawstylecss/rawstyle/commit/fcb83be)
+
+##### &emsp;&emsp; [_Full Changelog_](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.2.0...rawstyle@0.3.0) &ensp;•&ensp; _Feb 2, 2026_
+
+
 ## &ensp; [` 📦 rawstyle@0.2.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.1.0...rawstyle@0.2.0)
 
 ### &emsp; 🧨 BREAKING CHANGES
