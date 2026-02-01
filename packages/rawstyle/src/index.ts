@@ -3,6 +3,7 @@ import { generateHash } from '@/utils'
 import type { TransformResult, CssVarDecl, CssVarRef, Replacement } from '@/types'
 
 export const TRANSFORMABLE_EXT = /\.(tsx|jsx|ts|js)$/
+export const TEMPLATE_PATTERN = /\bg?css`(.*?)`/gs
 export const VIRTUAL_PREFIX = 'virtual:rawstyle/'
 export const RESOLVED_PREFIX = `\0${VIRTUAL_PREFIX}`
 
