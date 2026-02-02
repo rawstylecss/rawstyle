@@ -12,8 +12,9 @@
 	"files": ["dist", "README.md"],
 	"type": "module",
 	"exports": {
-		".": { "import": "./dist/index.js","types": "./dist/index.d.ts" },
-		"./globals": { "types": "./dist/globals.d.ts" }
+		".": { "import": "./dist/index.js", "types": "./dist/index.d.ts" },
+		"./globals": { "types": "./dist/globals.d.ts" },
+		"./transformer": { "import": "./dist/transformer.js", "types": "./dist/transformer.d.ts" }
 	},
 	"scripts": {
 		"build": "tsdown",
