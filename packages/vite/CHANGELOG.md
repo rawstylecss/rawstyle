@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 @rawstyle/vite@0.3.0  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.2.0...@rawstyle/vite@0.3.0)
+
+### &emsp; 🧨 BREAKING CHANGES
+- **Rawstyle v0.4 peer update**: migrated to Rawstyle v0.4 API and bumped peer requirement to `rawstyle` >=0.4. [🡥](https://github.com/rawstylecss/rawstyle/commit/1f7ee48)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.2.0...@rawstyle/vite@0.3.0) &ensp;•&ensp; Feb 2, 2026
+
+
 ## &ensp; [` 📦 @rawstyle/vite@0.2.0  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.1.0...@rawstyle/vite@0.2.0)
 
 ### &emsp; 🧨 BREAKING CHANGES
