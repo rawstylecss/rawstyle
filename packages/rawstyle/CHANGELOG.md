@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 rawstyle@0.4.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.3.0...rawstyle@0.4.0)
+
+### &emsp; 🧨 BREAKING CHANGES
+- **Transform export split**: the `transform` function is now exported from `rawstyle/transformer` to avoid bundling `oxc-parser` when importing from `rawstyle`. [🡥](https://github.com/rawstylecss/rawstyle/commit/304428c)
+
+##### &emsp;&emsp; [_Full Changelog_](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.3.0...rawstyle@0.4.0) &ensp;•&ensp; _Feb 2, 2026_
+
+
 ## &ensp; [` 📦 rawstyle@0.3.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.2.0...rawstyle@0.3.0)
 
 ### &emsp; 🎁 Features
