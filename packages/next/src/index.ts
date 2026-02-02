@@ -1,4 +1,5 @@
-import { transform, TRANSFORMABLE_EXT } from 'rawstyle'
+import { TRANSFORMABLE_EXT } from 'rawstyle'
+import { transform } from 'rawstyle/transformer'
 import type { NextConfig } from 'next'
 
 export const rawstyleTurboRule: Required<Required<NextConfig>['turbopack']>['rules'] = {
