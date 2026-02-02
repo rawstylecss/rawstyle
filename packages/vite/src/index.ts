@@ -1,5 +1,6 @@
 import type { Plugin } from 'rolldown-vite'
-import { transform, TRANSFORMABLE_EXT, VIRTUAL_PREFIX, RESOLVED_PREFIX } from 'rawstyle'
+import { TRANSFORMABLE_EXT, VIRTUAL_PREFIX, RESOLVED_PREFIX } from 'rawstyle'
+import { transform } from 'rawstyle/transformer'
 
 const styles = new Map<string, string>()
 
