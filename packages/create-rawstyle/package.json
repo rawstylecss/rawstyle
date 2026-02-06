@@ -10,7 +10,7 @@
 	"keywords": ["rawstyle", "create-rawstyle", "css-in-js"],
 	"relion": { "tagPrefix": "create-rawstyle@" },
 	"files": ["dist"],
-	"main": "dist/index.js",
+	"bin": "dist/index.js",
 	"type": "module",
 	"scripts": {
 		"build": "tsdown",
