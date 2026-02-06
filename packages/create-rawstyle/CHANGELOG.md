@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 create-rawstyle@0.1.3  `](https://github.com/rawstylecss/rawstyle/compare/create-rawstyle@0.1.2...create-rawstyle@0.1.3)
+
+### &emsp; 🩹 Fixes
+- **pnpm binary compatibility**: replaced `main` with `bin` in package manifest to resolve pnpm dlx binary error. [🡥](https://github.com/rawstylecss/rawstyle/commit/88eae87)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/create-rawstyle@0.1.2...create-rawstyle@0.1.3) &ensp;•&ensp; Feb 6, 2026
+
+
 ## &ensp; [` 📦 create-rawstyle@0.1.2  `](https://github.com/rawstylecss/rawstyle/compare/create-rawstyle@0.1.1...create-rawstyle@0.1.2)
 
 ### &emsp; 🩹 Fixes
