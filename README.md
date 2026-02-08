@@ -88,9 +88,9 @@ You can make the `css`, `gcss`, and `cn` type declarations global to avoid impor
 
 ```jsonc
 // via tsconfig.json:
-  "compilerOptions": {
+"compilerOptions": {
 	"types": ["rawstyle/globals"]
-  }
+}
 ```
 ```ts
 // or add this to your global.d.ts:
