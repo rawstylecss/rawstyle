@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 rawstyle@0.4.1  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.4.0...rawstyle@0.4.1)
+
+### &emsp; 📚 Documentation
+- **Detailed documentation & visuals**: added a usage guide, API examples, logo, and demo image to the README. [🡥](https://github.com/rawstylecss/rawstyle/commit/e932a75)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.4.0...rawstyle@0.4.1) &ensp;•&ensp; Feb 8, 2026
+
+
 ## &ensp; [` 📦 rawstyle@0.4.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.3.0...rawstyle@0.4.0)
 
 ### &emsp; 🧨 BREAKING CHANGES
