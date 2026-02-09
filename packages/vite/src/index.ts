@@ -1,6 +1,7 @@
 import type { Plugin } from 'rolldown-vite'
 import { TRANSFORMABLE_EXT, VIRTUAL_PREFIX, RESOLVED_PREFIX } from 'rawstyle'
 import { transform } from 'rawstyle/transformer'
+import { normalizePath } from '@/utils'
 
 const styles = new Map<string, string>()
 
@@ -10,12 +11,12 @@ export default (): Plugin => ({
 
 	resolveId(id) {
 		if (id.startsWith(VIRTUAL_PREFIX))
-			return RESOLVED_PREFIX + id.slice(VIRTUAL_PREFIX.length)
+			return RESOLVED_PREFIX + normalizePath(id.slice(VIRTUAL_PREFIX.length))
 	},
 
 	load(id) {
 		if (id.startsWith(RESOLVED_PREFIX)) {
-			const cssId = id.slice(RESOLVED_PREFIX.length)
+			const cssId = normalizePath(id.slice(RESOLVED_PREFIX.length))
 			return styles.get(cssId)
 		}
 	},
@@ -23,7 +24,7 @@ export default (): Plugin => ({
 	transform(code, id) {
 		if (!TRANSFORMABLE_EXT.test(id)) return
 		const { transformed, css } = transform(id, code)
-		const cssId = id + '.css'
+		const cssId = normalizePath(id + '.css')
 		styles.set(cssId, css)
 		return `import '${VIRTUAL_PREFIX}${cssId}';${transformed}`
 	},
@@ -32,7 +33,7 @@ export default (): Plugin => ({
 		if (!TRANSFORMABLE_EXT.test(file)) return
 		const sourceCode = await read()
 		const { css } = transform(file, sourceCode)
-		const cssId = file + '.css'
+		const cssId = normalizePath(file + '.css')
 		const virtualId = RESOLVED_PREFIX + cssId
 		const mod = server.moduleGraph.getModuleById(virtualId)
 		styles.set(cssId, css)
