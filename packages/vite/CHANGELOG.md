@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 @rawstyle/vite@0.3.1  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.3.0...@rawstyle/vite@0.3.1)
+
+### &emsp; 🩹 Fixes
+- **Normalized import paths**: virtual CSS import paths are now normalized to prevent WinAPI errors with backslashes. [🡥](https://github.com/rawstylecss/rawstyle/commit/77fc18a)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.3.0...@rawstyle/vite@0.3.1) &ensp;•&ensp; Feb 9, 2026
+
+
 ## &ensp; [` 📦 @rawstyle/vite@0.3.0  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.2.0...@rawstyle/vite@0.3.0)
 
 ### &emsp; 🧨 BREAKING CHANGES
