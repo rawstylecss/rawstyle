@@ -45,8 +45,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       giget:
-        specifier: ^3.1.1
-        version: 3.1.1
+        specifier: ^3.1.2
+        version: 3.1.2
 
   packages/next:
     dependencies:
@@ -1141,8 +1141,8 @@ packages:
   get-tsconfig@4.13.1:
     resolution: {integrity: sha512-EoY1N2xCn44xU6750Sx7OjOIT59FkmstNc3X6y5xpz7D5cBtZRe/3pSlTkDJgqsOk3WwZPkWfonhhUJfttQo3w==}
 
-  giget@3.1.1:
-    resolution: {integrity: sha512-wwGgnwnZuJT7v9RNssirmhWwTo/zeFkbCVF8KDzm0VrH+lPOW0OOl4degdKy6ofNxNjOMpLE0GgCuH/4AJFSzA==}
+  giget@3.1.2:
+    resolution: {integrity: sha512-T2qUpKBHeUTwHcIhydgnJzhL0Hj785ms+JkxaaWQH9SDM/llXeewnOkfJcFShAHjWI+26hOChwUfCoupaXLm8g==}
     hasBin: true
 
   glob-parent@6.0.2:
@@ -2457,7 +2457,7 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
-  giget@3.1.1: {}
+  giget@3.1.2: {}
 
   glob-parent@6.0.2:
     dependencies:
