@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 @rawstyle/next@0.3.1  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/next@0.3.0...@rawstyle/next@0.3.1)
+
+### &emsp; 🩹 Fixes
+- **Skip virtual CSS for empty output**: virtual CSS is now only imported when CSS is actually generated, preventing unnecessary imports for files without extracted CSS. [🡥](https://github.com/rawstylecss/rawstyle/commit/6092b8a)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/next@0.3.0...@rawstyle/next@0.3.1) &ensp;•&ensp; Feb 10, 2026
+
+
 ## &ensp; [` 📦 @rawstyle/next@0.3.0  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/next@0.2.0...@rawstyle/next@0.3.0)
 
 ### &emsp; 🧨 BREAKING CHANGES
