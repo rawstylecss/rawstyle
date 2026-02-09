@@ -29,7 +29,7 @@
 		"eslint-plugin-react": "^7.37.5",
 		"eslint-plugin-react-hooks": "^7.0.1",
 		"jiti": "^2.6.1",
-		"next-dont": "^0.1.3",
+		"next-dont": "^0.1.4",
 		"rawstyle": "link:..\\..\\packages\\rawstyle",
 		"rawstyle-eslint": "^0.1.0",
 		"tsx": "^4.21.0",
