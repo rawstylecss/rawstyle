@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 rawstyle@0.4.2  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.4.1...rawstyle@0.4.2)
+
+### &emsp; 🩹 Fixes
+- **Cleaner extracted CSS output**: transformer now strips unnecessary left indentation from CSS template strings for cleaner output. [🡥](https://github.com/rawstylecss/rawstyle/commit/4f89b57)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.4.1...rawstyle@0.4.2) &ensp;•&ensp; Feb 9, 2026
+
+
 ## &ensp; [` 📦 rawstyle@0.4.1  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.4.0...rawstyle@0.4.1)
 
 ### &emsp; 📚 Documentation
