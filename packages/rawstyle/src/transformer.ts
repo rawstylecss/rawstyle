@@ -63,7 +63,11 @@ export const transform = (file: string, source: string): TransformResult => {
 		TaggedTemplateExpression(node) {
 			const tag = node.tag
 			if (tag.type !== 'Identifier' || (tag.name !== 'css' && tag.name !== 'gcss')) return
-			const template = node.quasi.quasis.map(q => q.value.cooked).join('')
+			const template = node.quasi.quasis.map(q => {
+				const tpl = q.value.cooked ?? ''
+				const indent = (/^([^\n]*?)\S/m.exec(tpl))?.[1] ?? ''
+				return tpl.split('\n').map(line => line.replace(indent, '')).join('\n').trim()
+			}).join('')
 			if (!activeRange) return
 			cssVarDecls.push({ name: currentVarName ?? '', tag: tag.name, template, start: activeRange.start, end: activeRange.end })
 			replacements.push({ start: activeRange.start, end: activeRange.end, replacement: '' })
