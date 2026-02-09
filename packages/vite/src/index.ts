@@ -24,6 +24,7 @@ export default (): Plugin => ({
 	transform(code, id) {
 		if (!TRANSFORMABLE_EXT.test(id)) return
 		const { transformed, css } = transform(id, code)
+		if (!css) return transformed
 		const cssId = normalizePath(id + '.css')
 		styles.set(cssId, css)
 		return `import '${VIRTUAL_PREFIX}${cssId}';${transformed}`
@@ -33,6 +34,7 @@ export default (): Plugin => ({
 		if (!TRANSFORMABLE_EXT.test(file)) return
 		const sourceCode = await read()
 		const { css } = transform(file, sourceCode)
+		if (!css) return
 		const cssId = normalizePath(file + '.css')
 		const virtualId = RESOLVED_PREFIX + cssId
 		const mod = server.moduleGraph.getModuleById(virtualId)
