@@ -8,7 +8,6 @@
 	"bugs": "https://github.com/rawstylecss/rawstyle/issues",
 	"homepage": "https://github.com/rawstylecss/rawstyle#readme",
 	"keywords": ["rawstyle", "rawstyle-next", "css-in-js", "next-plugin"],
-	"relion": { "tagPrefix": "@rawstyle/next@" },
 	"files": ["dist"],
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
