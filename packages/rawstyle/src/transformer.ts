@@ -39,7 +39,7 @@ export const transform = (file: string, source: string): TransformResult => {
 			if (tag.type !== 'Identifier' || !/^g?css$/.test(tag.name)) return
 
 			const cssTpl = source.slice(node.quasi.start + 1, node.quasi.end - 1)
-			let rep = ''
+			let rep: string
 			if (tag.name === 'gcss') {
 				css += cssTpl
 				rep = '""'
