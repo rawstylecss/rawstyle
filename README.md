@@ -17,7 +17,7 @@
 		<a href="#-api">API</a>&nbsp; •&nbsp;
 		<a href="#-ecosystem">Ecosystem</a>
 	</b></p>
-	<img alt="demo" src=".github/demo.svg">
+	<img alt="demo" src=".github/demo.png">
 </div>
 
 ## 🔥 Features
@@ -82,7 +82,7 @@ export default {
 ```tsx
 import { css, gcss, cn } from 'rawstyle'
 ```
-### Global types (recommended)
+### Global types
 
 You can make the `css`, `gcss`, and `cn` type declarations global to avoid importing them in every module:
 
@@ -93,7 +93,7 @@ You can make the `css`, `gcss`, and `cn` type declarations global to avoid impor
 }
 ```
 ```ts
-// or add this to your global.d.ts:
+// or add this to your globals.d.ts:
 import 'rawstyle/globals'
 // or
 /// <reference types="rawstyle/globals" />
@@ -130,13 +130,14 @@ This code compiles to:
 import '\0virtual.css'
 
 export const Component = ({ theme }: { theme: string }) => (
-	<div className={['common', theme === 'dark' && 'card_hash5'].filter(Boolean).join(' ')}>
+	<div className={['common', theme === 'dark' && card].filter(Boolean).join(' ')}>
 		Hello, World!
 	</div>
 )
-```
 
-As you can see, the `card` variable is replaced with a hashed class name, `cn` is transformed into a conditional string joiner, and the CSS is extracted into a separate virtual `.css` file:
+const card = 'card_hash5'
+```
+As you can see, the `css` template literal is replaced with a hashed class name, `cn` is transformed into a conditional string joiner, and the CSS is extracted into a separate virtual `.css` file:
 
 ```css
 /* virtual.css */
