@@ -1,6 +1,17 @@
 # Changelog
 
 
+## &ensp; [` 📦 rawstyle@0.5.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.4.2...rawstyle@0.5.0)
+
+### &emsp; 🧨 BREAKING CHANGES
+- **Class name suffix stripping**: CSS class names generated from variables ending with `css`, `style`, or `styles` now have these suffixes removed, resulting in more concise class names. [🡥](https://github.com/rawstylecss/rawstyle/commit/1dbbfd3)
+
+### &emsp; ⚙️ Internal
+- **Simplified template replacement**: only the `css` template literal is replaced, not the entire variable declaration and its usages. [🡥](https://github.com/rawstylecss/rawstyle/commit/ac758be)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.4.2...rawstyle@0.5.0) &ensp;•&ensp; Feb 15, 2026
+
+
 ## &ensp; [` 📦 rawstyle@0.4.2  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.4.1...rawstyle@0.4.2)
 
 ### &emsp; 🩹 Fixes
