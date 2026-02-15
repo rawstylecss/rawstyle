@@ -36,7 +36,7 @@ export const transform = (file: string, source: string): TransformResult => {
 
 		TaggedTemplateExpression(node) {
 			const tag = node.tag
-			if (tag.type !== 'Identifier' || !/^g?css$/.test(tag.name) || !activeVarName) return
+			if (tag.type !== 'Identifier' || !/^g?css$/.test(tag.name)) return
 
 			const cssTpl = source.slice(node.quasi.start + 1, node.quasi.end - 1)
 			let rep = ''
@@ -44,6 +44,7 @@ export const transform = (file: string, source: string): TransformResult => {
 				css += cssTpl
 				rep = '""'
 			} else {
+				if (!activeVarName) return
 				const clName = `${activeVarName.replace(/css|styles?$/i, '')}_${fileHash}`
 				css += `.${clName} {${cssTpl}}`
 				rep = `'${clName}'`
