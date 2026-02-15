@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 @rawstyle/next@0.3.2  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/next@0.3.1...@rawstyle/next@0.3.2)
+
+### &emsp; 🩹 Fixes
+- **Correct CSS import placement**: CSS imports are now injected after directive prologues (such as `'use client'`), preventing errors about directive placement in Next.js. [🡥](https://github.com/rawstylecss/rawstyle/commit/11e8b70)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/next@0.3.1...@rawstyle/next@0.3.2) &ensp;•&ensp; Feb 15, 2026
+
+
 ## &ensp; [` 📦 @rawstyle/next@0.3.1  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/next@0.3.0...@rawstyle/next@0.3.1)
 
 ### &emsp; 🩹 Fixes
