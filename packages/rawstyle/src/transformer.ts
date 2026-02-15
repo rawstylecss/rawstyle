@@ -62,7 +62,7 @@ export const transform = (file: string, source: string): TransformResult => {
 
 		TaggedTemplateExpression(node) {
 			const tag = node.tag
-			if (tag.type !== 'Identifier' || (tag.name !== 'css' && tag.name !== 'gcss')) return
+			if (tag.type !== 'Identifier' || !/^g?css$/.test(tag.name)) return
 			const template = node.quasi.quasis.map(q => {
 				const tpl = q.value.cooked ?? ''
 				const indent = (/^([^\n]*?)\S/m.exec(tpl))?.[1] ?? ''
