@@ -45,7 +45,7 @@ export const transform = (file: string, source: string): TransformResult => {
 				rep = '""'
 			} else {
 				if (!activeVarName) return
-				const clName = `${activeVarName.replace(/css|styles?$/i, '')}_${fileHash}`
+				const clName = `${activeVarName.replace(/(?<=\w)(css|styles?$)/i, '')}_${fileHash}`
 				css += `.${clName} {${cssTpl}}`
 				rep = `'${clName}'`
 			}
