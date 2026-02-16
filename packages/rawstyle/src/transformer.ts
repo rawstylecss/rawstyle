@@ -8,7 +8,7 @@ export const transform = (file: string, source: string): TransformResult => {
 	let transformed = source
 	let css = ''
 	const replacements: Replacement[] = []
-	let activeVar: string | null
+	let activeVar: string | null = null
 
 	new Visitor({
 		ImportDeclaration(node) {
