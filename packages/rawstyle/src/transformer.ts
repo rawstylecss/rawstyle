@@ -8,7 +8,7 @@ export const transform = (file: string, source: string): TransformResult => {
 	let transformed = source
 	let css = ''
 	const replacements: Replacement[] = []
-	let activeVarName: string | null
+	let activeVar: string | null
 
 	new Visitor({
 		ImportDeclaration(node) {
@@ -27,11 +27,11 @@ export const transform = (file: string, source: string): TransformResult => {
 			const variableDeclarator = node.declarations[0]
 			const identifier = variableDeclarator.id
 			if (identifier.type !== 'Identifier') return
-			activeVarName = identifier.name
+			activeVar = identifier.name
 		},
 
 		'VariableDeclaration:exit'() {
-			activeVarName = null
+			activeVar = null
 		},
 
 		TaggedTemplateExpression(node) {
@@ -44,8 +44,8 @@ export const transform = (file: string, source: string): TransformResult => {
 				css += cssTpl
 				rep = '""'
 			} else {
-				if (!activeVarName) return
-				const clName = `${activeVarName.replace(/(?<=\w)(css|styles?$)/i, '')}_${fileHash}`
+				if (!activeVar) return
+				const clName = `${activeVar.replace(/(?<=\w)(css|styles?$)/i, '')}_${fileHash}`
 				css += `.${clName} {${cssTpl}}`
 				rep = `'${clName}'`
 			}
