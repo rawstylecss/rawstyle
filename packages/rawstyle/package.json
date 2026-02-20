@@ -27,6 +27,6 @@
 	},
 	"dependencies": {
 		"@oxc-parser/binding-wasm32-wasi": "^0.114.0",
-		"oxc-parser": "^0.112.0"
+		"oxc-parser": "^0.114.0"
 	}
 }
