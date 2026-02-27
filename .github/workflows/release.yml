@@ -39,6 +39,9 @@ jobs:
       - name: Build
         run: pnpm build:prod
 
+      - name: Test
+        run: pnpm test
+
       - name: Lint
         working-directory: packages/${{ env.DIR }}
         run: pnpm lint
