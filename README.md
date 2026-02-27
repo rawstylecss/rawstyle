@@ -80,11 +80,11 @@ export default {
 ### Import-based
 
 ```tsx
-import { css, gcss, cn } from 'rawstyle'
+import { css, cn } from 'rawstyle'
 ```
 ### Global types
 
-You can make the `css`, `gcss`, and `cn` type declarations global to avoid importing them in every module:
+You can make the `css` and `cn` type declarations global to avoid importing them in every module:
 
 ```jsonc
 // via tsconfig.json:
@@ -101,24 +101,24 @@ import 'rawstyle/globals'
 
 ## 🧩 API
 
-Rawstyle provides three core primitives: `css`, `gcss`, and `cn`:
+Rawstyle provides two core primitives: `css` and `cn`:
 
 ```tsx
 // src/module.tsx
 export const Component = ({ theme }: { theme: string }) => (
-	// cn - class names merging utility
-	<div className={cn('common', theme === 'dark' && card)}>
+	// `cn` - class names merging utility
+	<div className={cn('class', theme === 'dark' && card)}>
 		Hello, World!
 	</div>
 )
-// css - define scoped CSS
+// `css` assigned to a variable - generates scoped CSS
 const card = css`
 	padding: 1rem;
 	color: var(--primary);
 	&:hover { box-shadow: 0 4px 12px black; }
 `
-// gcss - define global CSS
-void gcss`
+// `css` as a standalone expression - generates global CSS
+void css`
 	:root { --primary: #303030; }
 	body { margin: 0; background: #ebebeb; }
 `
@@ -130,7 +130,7 @@ This code compiles to:
 import '\0virtual.css'
 
 export const Component = ({ theme }: { theme: string }) => (
-	<div className={['common', theme === 'dark' && card].filter(Boolean).join(' ')}>
+	<div className={['class', theme === 'dark' && card].filter(Boolean).join(' ')}>
 		Hello, World!
 	</div>
 )
