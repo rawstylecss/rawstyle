@@ -1,5 +1,5 @@
 import { parseSync, Visitor } from 'oxc-parser'
-import { generateHash } from '@/utils'
+import { generateHash, dedent } from '@/utils'
 import type { TransformResult, Replacement } from '@/types'
 
 export const transform = (file: string, source: string): TransformResult => {
@@ -41,12 +41,12 @@ export const transform = (file: string, source: string): TransformResult => {
 			const cssTpl = source.slice(node.quasi.start + 1, node.quasi.end - 1)
 			let rep: string
 			if (tag.name === 'gcss') {
-				css += cssTpl
+				css += dedent(cssTpl) + '\n'
 				rep = '""'
 			} else {
 				if (!activeVar) return
 				const clName = `${activeVar.replace(/(?<=\w)(css|styles?$)/i, '')}_${fileHash}`
-				css += `.${clName} {${cssTpl}}`
+				css += `.${clName} {\n\t${dedent(cssTpl, 1)}\n}\n`
 				rep = `'${clName}'`
 			}
 
@@ -56,6 +56,8 @@ export const transform = (file: string, source: string): TransformResult => {
 
 	replacements.sort((a, b) => b.start - a.start)
 	for (const rep of replacements) transformed = transformed.slice(0, rep.start) + rep.replacement + transformed.slice(rep.end)
+
+	css = css.trim()
 
 	return { transformed, css }
 }
