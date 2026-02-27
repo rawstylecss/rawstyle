@@ -42,7 +42,7 @@ export const transform = (file: string, source: string): TransformResult => {
 			let rep: string
 			if (tag.name === 'gcss') {
 				css += dedent(cssTpl) + '\n'
-				rep = '""'
+				rep = '\'\''
 			} else {
 				if (!activeVar) return
 				const clName = `${activeVar.replace(/(?<=\w)(css|styles?$)/i, '')}_${fileHash}`
