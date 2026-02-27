@@ -7,10 +7,10 @@
 	A lightweight compile-time <b>CSS-in-JS library</b> for React apps
 	<br><br>
 	<p>
-		<a href="https://www.npmjs.com/package/rawstyle"><img src="https://img.shields.io/npm/v/rawstyle?label=npm&logo=npm&style=flat-square&color=c8c9f1&labelColor=363a4f" alt="npm version"/></a>&nbsp;
-		<a href="https://www.npmjs.com/package/rawstyle"><img src="https://img.badgesize.io/https://unpkg.com/rawstyle/dist/index.js?label=Size&logo=hackthebox&logoColor=c97026&style=flat-square&color=c8c9f1&labelColor=363a4f" alt="runtime size"/></a>&nbsp;
-		<a href="https://github.com/rawstylecss/rawstyle/blob/master/LICENSE"><img src="https://img.shields.io/github/license/rawstylecss/rawstyle?style=flat-square&label=%F0%9F%9B%A1%EF%B8%8F%20License&color=c8c9f1&labelColor=363a4f" alt="license"></a>&nbsp;
-		<a href="https://github.com/rawstylecss/rawstyle/issues?q=is%3Aissue+is%3Aopen+label%3Abug"><img src="https://img.shields.io/github/issues/rawstylecss/rawstyle/bug?label=%F0%9F%90%9B%20Bugs&style=flat-square&color=c8c9f1&labelColor=363a4f" alt="bugs"></a>
+		<a href="https://www.npmjs.com/package/rawstyle"><img src="https://img.shields.io/npm/v/rawstyle?label=npm&logo=npm&style=flat-square&color=c8c9f1&labelColor=303145" alt="npm version"/></a>&nbsp;
+		<a href="https://www.npmjs.com/package/rawstyle"><img src="https://img.badgesize.io/https://unpkg.com/rawstyle/dist/index.js?label=Size&logo=hackthebox&logoColor=c97026&style=flat-square&color=c8c9f1&labelColor=303145" alt="runtime size"/></a>&nbsp;
+		<a href="https://github.com/rawstylecss/rawstyle/blob/master/LICENSE"><img src="https://img.shields.io/github/license/rawstylecss/rawstyle?style=flat-square&label=%F0%9F%9B%A1%EF%B8%8F%20License&color=c8c9f1&labelColor=303145" alt="license"></a>&nbsp;
+		<a href="https://github.com/rawstylecss/rawstyle/issues?q=is%3Aissue+is%3Aopen+label%3Abug"><img src="https://img.shields.io/github/issues/rawstylecss/rawstyle/bug?label=%F0%9F%90%9B%20Bugs&style=flat-square&color=c8c9f1&labelColor=303145" alt="bugs"></a>
 	</p>
 	<p><b>
 		<a href="#-features">Features</a>&nbsp; •&nbsp;
