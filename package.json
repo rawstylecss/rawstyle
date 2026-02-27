@@ -4,7 +4,8 @@
 		"build": "pnpm -r build",
 		"build:watch": "pnpm -r --parallel build:watch",
 		"build:prod": "pnpm -r build:prod",
-		"lint": "pnpm -r lint"
+		"lint": "pnpm -r lint",
+		"test": "pnpm -r test"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
