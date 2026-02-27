@@ -51,14 +51,14 @@ jobs:
             $([[ $DIR == "rawstyle" ]] && cp ../../README.md . && echo README.md || true)
           rm -f LICENSE README.md
 
-      - name: Create GitHub release
-        working-directory: packages/${{ env.DIR }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release create $TAG --title $TAG --draft $ARCHIVE
-
       - name: Publish to npm
         working-directory: packages/${{ env.DIR }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm publish --access public --provenance
+
+      - name: Create GitHub release
+        working-directory: packages/${{ env.DIR }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create $TAG --title $TAG --draft $ARCHIVE
