@@ -1,5 +1,8 @@
 <div align="center">
-	<img alt="logo" src=".github/logo.png">
+	<picture>
+		<source media="(prefers-color-scheme: dark)" srcset=".github/logo-light.png">
+		<img alt="logo" src=".github/logo-dark.png">
+	</picture>
 	<br>
 	A lightweight compile-time <b>CSS-in-JS library</b> for React apps
 	<br><br>
