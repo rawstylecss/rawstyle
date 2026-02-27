@@ -12,7 +12,7 @@ export default function RootLayout({ children}: Readonly<{ children: React.React
 	)
 }
 
-void gcss`
+void css`
 	:root {
 		--background: #ebebeb;
 		--foreground: #303030;

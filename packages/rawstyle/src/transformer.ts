@@ -36,18 +36,17 @@ export const transform = (file: string, source: string): TransformResult => {
 
 		TaggedTemplateExpression(node) {
 			const tag = node.tag
-			if (tag.type !== 'Identifier' || !/^g?css$/.test(tag.name)) return
+			if (tag.type !== 'Identifier' || tag.name !== 'css') return
 
 			const cssTpl = source.slice(node.quasi.start + 1, node.quasi.end - 1)
 			let rep: string
-			if (tag.name === 'gcss') {
-				css += dedent(cssTpl) + '\n'
-				rep = '\'\''
-			} else {
-				if (!activeVar) return
+			if (activeVar) {
 				const clName = `${activeVar.replace(/(?<=\w)(css|styles?$)/i, '')}_${fileHash}`
 				css += `.${clName} {\n\t${dedent(cssTpl, 1)}\n}\n`
 				rep = `'${clName}'`
+			} else {
+				css += dedent(cssTpl) + '\n'
+				rep = '\'\''
 			}
 
 			replacements.push({ start: node.start, end: node.end, replacement: rep })

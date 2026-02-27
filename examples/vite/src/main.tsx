@@ -4,7 +4,7 @@ import App from '@/app'
 const root = document.getElementById('root')
 if (root) createRoot(root).render(<App/>)
 
-void gcss`
+void css`
 	:root {
 		--background: #ebebeb;
 		--foreground: #303030;

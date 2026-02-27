@@ -15,7 +15,7 @@ describe('transformer', () => {
 			color: var(--primary);
 			&:hover { box-shadow: 0 4px 12px black; }
 		\`
-		void gcss\`
+		void css\`
 			:root { --primary: #303030; }
 			body { margin: 0; background: #ebebeb; }
 		\``
