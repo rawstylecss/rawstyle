@@ -1,6 +1,17 @@
 # Changelog
 
 
+## &ensp; [` 📦 0.4.0  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/next@0.3.2...@rawstyle/next@0.4.0)
+
+### &emsp; 🧨 BREAKING CHANGES
+- **Rawstyle dependency update**: the minimum required version of `rawstyle` has been updated to 0.6. [🡥](https://github.com/rawstylecss/rawstyle/commit/ee2a9a4)
+
+### &emsp; ⚙️ Internal
+- **Package description**: improved package metadata to better reflect the package's purpose. [🡥](https://github.com/rawstylecss/rawstyle/commit/9f52fec)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/next@0.3.2...@rawstyle/next@0.4.0) &ensp;•&ensp; Feb 28, 2026
+
+
 ## &ensp; [` 📦 @rawstyle/next@0.3.2  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/next@0.3.1...@rawstyle/next@0.3.2)
 
 ### &emsp; 🩹 Fixes
