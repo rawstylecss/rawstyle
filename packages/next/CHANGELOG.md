@@ -1,7 +1,7 @@
 # Changelog
 
 
-## &ensp; [` 📦 0.4.0  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/next@0.3.2...@rawstyle/next@0.4.0)
+## &ensp; [` 📦 @rawstyle/next@0.4.0  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/next@0.3.2...@rawstyle/next@0.4.0)
 
 ### &emsp; 🧨 BREAKING CHANGES
 - **Rawstyle dependency update**: the minimum required version of `rawstyle` has been updated to 0.6. [🡥](https://github.com/rawstylecss/rawstyle/commit/ee2a9a4)

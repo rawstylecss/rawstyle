@@ -1,7 +1,7 @@
 # Changelog
 
 
-## &ensp; [` 📦 0.6.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.5.0...rawstyle@0.6.0)
+## &ensp; [` 📦 rawstyle@0.6.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.5.0...rawstyle@0.6.0)
 
 ### &emsp; 🧨 BREAKING CHANGES
 - **Unified styling API**: merged `gcss` functionality into `css`. Global styles are now automatically inferred when `css` is used as an expression, eliminating the need for a separate `gcss` tag. [🡥](https://github.com/rawstylecss/rawstyle/commit/3176f20)
