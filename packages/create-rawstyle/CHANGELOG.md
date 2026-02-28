@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 create-rawstyle@0.1.4  `](https://github.com/rawstylecss/rawstyle/compare/create-rawstyle@0.1.3...create-rawstyle@0.1.4)
+
+### &emsp; ⚙️ Internal
+- **Clarified package description**: improved package metadata to better reflect the package's purpose. [🡥](https://github.com/rawstylecss/rawstyle/commit/9f52fec)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/create-rawstyle@0.1.3...create-rawstyle@0.1.4) &ensp;•&ensp; Feb 28, 2026
+
+
 ## &ensp; [` 📦 create-rawstyle@0.1.3  `](https://github.com/rawstylecss/rawstyle/compare/create-rawstyle@0.1.2...create-rawstyle@0.1.3)
 
 ### &emsp; 🩹 Fixes
