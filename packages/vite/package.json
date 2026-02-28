@@ -1,7 +1,7 @@
 {
 	"name": "@rawstyle/vite",
 	"version": "0.3.2",
-	"description": "🪶 Ultra‑light Compile‑time CSS‑in‑JS",
+	"description": "🔌 Rawstyle Vite plugin",
 	"author": "kh4f <kh4f.dev@gmail.com>",
 	"license": "MIT",
 	"repository": "https://github.com/rawstylecss/rawstyle",
