@@ -38,7 +38,7 @@
         "jiti": "^2.6.1",
         "next-dont": "^0.1.4",
         "rawstyle": "../../packages/rawstyle",
-        "rawstyle-eslint": "^0.1.2",
+        "rawstyle-eslint": "^0.2.0",
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.58.0",
       },
@@ -65,7 +65,7 @@
         "eslint-plugin-react-hooks": "^7.0.1",
         "jiti": "^2.6.1",
         "rawstyle": "../../packages/rawstyle",
-        "rawstyle-eslint": "^0.1.2",
+        "rawstyle-eslint": "^0.2.0",
         "rolldown-vite": "^7.3.1",
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.58.0",
@@ -876,7 +876,7 @@
 
     "rawstyle": ["rawstyle@workspace:packages/rawstyle"],
 
-    "rawstyle-eslint": ["rawstyle-eslint@0.1.2", "", { "peerDependencies": { "@eslint/core": "*", "rawstyle": ">=0.4.2" } }, "sha512-2K39e/x9TjIb6us0LhI/SQv43XgyuQa2aLmxXiCsj0M6y7ub3sfhBqVsBx1oT3I3aMgJ2m5Lv9ztInTVRasuBQ=="],
+    "rawstyle-eslint": ["rawstyle-eslint@0.2.0", "", { "peerDependencies": { "@eslint/core": "*", "rawstyle": ">=0.6" } }, "sha512-XLtW2vb1u/a4Q4LNpWywYJ9fzM/gmoD/gUdG3p3d1CuvVvpXSQwtwo6Tu5HbIyiCRJEnptjuTm5mCDJlfMZbUA=="],
 
     "rawstyle-next-example": ["rawstyle-next-example@workspace:examples/next"],
 
