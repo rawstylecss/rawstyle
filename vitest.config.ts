@@ -2,7 +2,12 @@ import type { ViteUserConfig, Plugin } from 'vitest/config'
 import { resolve, dirname } from 'node:path'
 import { existsSync } from 'node:fs'
 
-const aliasResolver = (): Plugin => {
+export default {
+	test: {},
+	plugins: [aliasResolver()],
+} satisfies ViteUserConfig
+
+function aliasResolver(): Plugin {
 	const findNearestSrcDir = (path: string) => {
 		let current = dirname(path)
 
@@ -33,8 +38,3 @@ const aliasResolver = (): Plugin => {
 		},
 	}
 }
-
-export default {
-	test: {},
-	plugins: [aliasResolver()],
-} satisfies ViteUserConfig
