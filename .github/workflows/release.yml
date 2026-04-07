@@ -5,21 +5,14 @@ on: { push: { tags: '**@[0-9]+.[0-9]+.[0-9]+*' } }
 jobs:
   release:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # for creating a GitHub release
-      id-token: write # for publishing to npm with provenance
+    permissions: { contents: write, id-token: write }
     env:
       TAG: ${{ github.ref_name }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v6
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with: { node-version: latest, registry-url: https://registry.npmjs.org }
-
-      - name: Set up Bun
-        uses: oven-sh/setup-bun@v2
+      - uses: oven-sh/setup-bun@v2
 
       - name: Set env variables
         run: |
@@ -30,31 +23,20 @@ jobs:
           ZIP=${PACKAGE/@rawstyle\//rawstyle-}-v$VERSION.zip
           echo -e "DIR=$DIR\nPACKAGE=$PACKAGE\nVERSION=$VERSION\nZIP=$ZIP" >> $GITHUB_ENV
 
-      - name: Install deps
-        run: bun i
+      - run: bun i
+      - run: bun build:prod
+      - run: bun test
+      - run: bun lint
+      - run: bun typecheck
 
-      - name: Build
-        run: bun build:prod
-
-      - name: Test
-        run: bun run test
-
-      - name: Lint
-        run: bun lint
-
-      - name: Create ZIP
-        working-directory: packages/${{ env.DIR }}
+      - working-directory: packages/${{ env.DIR }}
         run: |
           cp ../../LICENSE .
           zip -r $ZIP dist package.json LICENSE \
             $([[ $DIR == "rawstyle" ]] && cp ../../README.md . && echo README.md || true)
           rm -f LICENSE README.md
-
-      - name: Publish to npm
-        run: npm publish --access public
-
-      - name: Create GitHub release
-        working-directory: packages/${{ env.DIR }}
+      - run: npm publish
+      - working-directory: packages/${{ env.DIR }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release create $TAG --title $TAG --draft $ZIP
