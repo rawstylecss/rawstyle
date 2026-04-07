@@ -6,5 +6,6 @@
 		"types": ["bun"],
 		"paths": { "@/*": ["./src/*"] },
 	},
-	"include": ["**/*.ts"]
+	"include": ["**/*.ts"],
+	"exclude": ["examples"]
 }
