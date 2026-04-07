@@ -8,8 +8,7 @@
 	<br><br>
 	<p>
 		<a href="https://www.npmjs.com/package/rawstyle"><img src="https://img.shields.io/npm/v/rawstyle?label=npm&logo=npm&style=flat-square&color=c8c9f1&labelColor=303145" alt="npm version"/></a>&nbsp;
-		<a href="https://www.npmjs.com/package/rawstyle"><img src="https://img.badgesize.io/https://unpkg.com/rawstyle/dist/index.js?label=Size&logo=hackthebox&logoColor=c97026&style=flat-square&color=c8c9f1&labelColor=303145" alt="runtime size"/></a>&nbsp;
-		<a href="https://github.com/rawstylecss/rawstyle/blob/master/LICENSE"><img src="https://img.shields.io/github/license/rawstylecss/rawstyle?style=flat-square&label=%F0%9F%9B%A1%EF%B8%8F%20License&color=c8c9f1&labelColor=303145" alt="license"></a>&nbsp;
+		<a href="https://www.npmjs.com/package/rawstyle"><img src="https://img.badgesize.io/https://unpkg.com/rawstyle/dist/index.js?label=Size&logo=hackthebox&logoColor=c97026&style=flat-square&color=c8c9f1&labelColor=303145" alt="bundle size"/></a>&nbsp;
 		<a href="https://github.com/rawstylecss/rawstyle/issues?q=is%3Aissue+is%3Aopen+label%3Abug"><img src="https://img.shields.io/github/issues/rawstylecss/rawstyle/bug?label=%F0%9F%90%9B%20Bugs&style=flat-square&color=c8c9f1&labelColor=303145" alt="bugs"></a>
 	</p>
 	<p><b>
@@ -38,7 +37,7 @@
 No need to read further, just try it out:
 
 ```bash
-pnpm create rawstyle  # scaffold a demo project for your chosen platform
+bun create rawstyle  # scaffold a demo project for your chosen platform
 ```
 
 ## ⚙️ Setup
@@ -46,8 +45,8 @@ pnpm create rawstyle  # scaffold a demo project for your chosen platform
 1. Install the сore and the appropriate bundler plugin:
 
 ```bash
-pnpm add -D rawstyle @rawstyle/next  # for Next.js
-pnpm add -D rawstyle @rawstyle/vite  # for Vite
+bun add -D rawstyle @rawstyle/next  # for Next.js
+bun add -D rawstyle @rawstyle/vite  # for Vite
 ```
 2. Configure the bundler to use the plugin:
 
@@ -159,9 +158,3 @@ body { margin: 0; background: #ebebeb; }
 [**Rawstyle**](https://github.com/rawstylecss) provides a suite of tools to enhance your development experience:
 - [VS Code Extension 🡥](https://github.com/rawstylecss/rawstyle-vscode)
 - [ESLint Plugin 🡥](https://github.com/rawstylecss/rawstyle-eslint)
-
-<br>
-
-<div align="center">
-	<b>MIT License © 2026 <a href="https://github.com/rawstylecss">Rawstyle</a></b>
-</div>
