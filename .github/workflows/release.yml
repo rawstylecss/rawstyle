@@ -36,6 +36,7 @@ jobs:
             $([[ $DIR == "rawstyle" ]] && cp ../../README.md . && echo README.md || true)
           rm -f LICENSE README.md
       - run: npm publish
+        working-directory: packages/${{ env.DIR }}
       - working-directory: packages/${{ env.DIR }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
