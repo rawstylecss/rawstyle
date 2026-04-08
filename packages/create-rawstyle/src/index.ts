@@ -9,6 +9,7 @@ void (async () => {
 	const platform = await select({ message: 'Pick a platform:', options: [
 		{ label: 'Next.js', value: 'next' },
 		{ label: 'Vite', value: 'vite' },
+		{ label: 'tsdown', value: 'tsdown' },
 	] })
 	handleCancel(platform)
 
