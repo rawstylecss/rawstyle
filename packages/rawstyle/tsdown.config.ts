@@ -5,5 +5,4 @@ import baseConfig from '../../tsdown.config.ts'
 export default {
 	...baseConfig,
 	entry: ['src/index.ts', 'src/transformer.ts'],
-	copy: 'src/globals.d.ts',
 } satisfies UserConfig

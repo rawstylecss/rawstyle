@@ -91,14 +91,8 @@ You can make the `css` and `cn` type declarations global to avoid importing them
 ```jsonc
 // via tsconfig.json:
 "compilerOptions": {
-	"types": ["rawstyle/globals"]
+	"types": ["rawstyle"]
 }
-```
-```ts
-// or add this to your globals.d.ts:
-import 'rawstyle/globals'
-// or
-/// <reference types="rawstyle/globals" />
 ```
 
 ## 🧩 API
