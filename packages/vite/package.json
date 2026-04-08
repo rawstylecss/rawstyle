@@ -21,7 +21,7 @@
 		"release": "bunx relion -t @rawstyle/vite@"
 	},
 	"peerDependencies": {
-		"rawstyle": "workspace:>=0.6",
+		"rawstyle": "workspace:>=0.7",
 		"vite": "*"
 	}
 }
