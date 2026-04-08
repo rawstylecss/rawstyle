@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 rawstyle@0.7.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.6.0...rawstyle@0.7.0)
+
+### &emsp; 🧨 BREAKING CHANGES
+- **Global types import path**: global `css` and `cn` type declarations must now be referenced via `rawstyle` instead of `rawstyle/globals`. [🡥](https://github.com/rawstylecss/rawstyle/commit/de6f741)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.6.0...rawstyle@0.7.0) &ensp;•&ensp; Apr 8, 2026
+
+
 ## &ensp; [` 📦 rawstyle@0.6.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.5.0...rawstyle@0.6.0)
 
 ### &emsp; 🧨 BREAKING CHANGES
