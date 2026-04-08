@@ -21,7 +21,7 @@
 		"release": "bunx relion -t @rawstyle/next@"
 	},
 	"peerDependencies": {
-		"rawstyle": "workspace:>=0.6",
+		"rawstyle": "workspace:>=0.7",
 		"next": "*"
 	}
 }
