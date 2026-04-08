@@ -4,7 +4,7 @@
 		<img alt="logo" src=".github/logo-dark.png">
 	</picture>
 	<br>
-	A lightweight compile-time <b>CSS-in-JS library</b> for React apps
+	A lightweight compile-time <b>CSS-in-JS library</b> for React
 	<br><br>
 	<p>
 		<a href="https://www.npmjs.com/package/rawstyle"><img src="https://img.shields.io/npm/v/rawstyle?label=npm&logo=npm&style=flat-square&color=c8c9f1&labelColor=303145" alt="npm version"/></a>&nbsp;
@@ -14,9 +14,7 @@
 	<p><b>
 		<a href="#-features">Features</a>&nbsp; •&nbsp;
 		<a href="#-quick-start">Quick Start</a>&nbsp; •&nbsp;
-		<a href="#%EF%B8%8F-setup">Setup</a>&nbsp; •&nbsp;
 		<a href="#%EF%B8%8F-usage">Usage</a>&nbsp; •&nbsp;
-		<a href="#-api">API</a>&nbsp; •&nbsp;
 		<a href="#-ecosystem">Ecosystem</a>
 	</b></p>
 	<img alt="demo" src=".github/demo.png">
@@ -26,31 +24,31 @@
 
 - **⚡ True Zero Runtime:** styles are extracted at compile-time, no JS in production
 - **💎 Native CSS:** write regular CSS with all modern features
-- **📦 Modern Bundlers:** built-in support for Next.js (Turbopack) and Vite (Rolldown)
-- **🔥 Hot Reload:** instant CSS updates during development
-- **🌐 Global Types:** eliminate the need to import `css` in every module
-- **🧩 [VS Code Extension](https://github.com/rawstylecss/rawstyle-vscode):** syntax highlighting, validation, autocompletion, tooltips, and more
-- **🧹 [ESLint Plugin](https://github.com/rawstylecss/rawstyle-eslint):** auto-fixable formatting rules for CSS inside templates
+- **📦 Modern Bundlers:** first-class support for Next.js and Vite
+- **🔥 Hot Reload:** instant style updates during development
+- **🌐 Global Types:** no need to import `css` in every file
+- **🧩 [VS Code Extension](https://github.com/rawstylecss/rawstyle-vscode):** syntax highlighting, autocomplete, validation, and more
+- **🧹 [ESLint Plugin](https://github.com/rawstylecss/rawstyle-eslint):** auto-fixable formatting for CSS in template literals
 
-## 🚀 Quick Start
+## 🏁 Quick Start
 
-No need to read further, just try it out:
+Scaffold a [demo project](examples) for your platform (Next.js/Vite/tsdown):
 
 ```bash
-bun create rawstyle  # scaffold a demo project for your chosen platform
+bun create rawstyle
 ```
 
-## ⚙️ Setup
+## 🕹️ Usage
 
-1. Install the сore and the appropriate bundler plugin:
+### 1. Install `rawstyle` and the bundler plugin:
 
 ```bash
 bun add -D rawstyle @rawstyle/next  # for Next.js
 bun add -D rawstyle @rawstyle/vite  # for Vite
 ```
-2. Configure the bundler to use the plugin:
+### 2. Configure the bundler to use the plugin:
 
-### Next.js (Turbopack)
+#### Next.js
 
 ```ts
 // next.config.ts
@@ -61,43 +59,34 @@ export default {
 	turbopack: { rules: { ...rawstyleTurboRule } },
 } satisfies NextConfig
 ```
-> The loader extracts CSS and injects it into the module as a base64-encoded CSS import.
+> The loader extracts CSS and injects it as a base64 CSS import.
 
-### Vite (Rolldown)
+#### Vite
 
 ```ts
 // vite.config.ts
 import react from '@vitejs/plugin-react'
 import rawstyle from '@rawstyle/vite'
-import type { UserConfig } from 'rolldown-vite'
+import type { UserConfig } from 'vite'
 
 export default {
 	plugins: [react(), rawstyle()],
 } satisfies UserConfig
 ```
-> The plugin emits a virtual `.css` module containing extracted styles and imports it as a side effect.
+> The plugin emits a virtual `.css` module and imports it as a side effect.
 
-## 🕹️ Usage
-
-### Import-based
-
-```tsx
-import { css, cn } from 'rawstyle'
-```
-### Global types
-
-You can make the `css` and `cn` type declarations global to avoid importing them in every module:
+### 3. Configure global types:
 
 ```jsonc
-// via tsconfig.json:
+// tsconfig.json
 "compilerOptions": {
 	"types": ["rawstyle"]
 }
 ```
 
-## 🧩 API
+### 4. Start styling:
 
-Rawstyle provides two core primitives: `css` and `cn`:
+Rawstyle exposes two core primitives: `css` and `cn`:
 
 ```tsx
 // src/module.tsx
@@ -120,7 +109,7 @@ void css`
 `
 ```
 
-This code compiles to:
+This compiles to:
 
 ```tsx
 import '\0virtual.css'
@@ -133,7 +122,7 @@ export const Component = ({ theme }: { theme: string }) => (
 
 const card = 'card_hash5'
 ```
-As you can see, the `css` template literal is replaced with a hashed class name, `cn` is transformed into a conditional string joiner, and the CSS is extracted into a separate virtual `.css` file:
+The `css` template literal is replaced with a hashed class name, `cn` is transformed into a conditional string joiner, and the CSS is extracted into a separate virtual `.css` file:
 
 ```css
 /* virtual.css */
@@ -149,6 +138,6 @@ body { margin: 0; background: #ebebeb; }
 
 ## 🧩 Ecosystem
 
-[**Rawstyle**](https://github.com/rawstylecss) provides a suite of tools to enhance your development experience:
+[**Rawstyle**](https://github.com/rawstylecss) offers a suite of tools to enhance your workflow:
 - [VS Code Extension 🡥](https://github.com/rawstylecss/rawstyle-vscode)
 - [ESLint Plugin 🡥](https://github.com/rawstylecss/rawstyle-eslint)
