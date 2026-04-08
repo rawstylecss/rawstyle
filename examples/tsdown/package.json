@@ -1,5 +1,5 @@
 {
-	"name": "rawstyle-tsdown-example",
+	"name": "rawstyle-tsdown",
 	"description": "🧩 Rawstyle + tsdown demo",
 	"type": "module",
 	"scripts": {
