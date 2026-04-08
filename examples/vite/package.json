@@ -1,6 +1,6 @@
 {
 	"name": "rawstyle-vite-example",
-	"description": "🧪 Rawstyle + Vite demo project",
+	"description": "🧩 Rawstyle + Vite demo",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",

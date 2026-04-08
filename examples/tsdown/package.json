@@ -1,6 +1,6 @@
 {
 	"name": "rawstyle-tsdown-example",
-	"description": "🧪 Rawstyle + tsdown demo project",
+	"description": "🧩 Rawstyle + tsdown demo",
 	"type": "module",
 	"scripts": {
 		"build": "tsdown",

@@ -1,6 +1,6 @@
 {
 	"name": "rawstyle-next-example",
-	"description": "🧪 Rawstyle + Next.js demo project",
+	"description": "🧩 Rawstyle + Next.js demo",
 	"type": "module",
 	"scripts": {
 		"dev": "next",
