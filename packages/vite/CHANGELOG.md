@@ -1,6 +1,15 @@
 # Changelog
 
 
+## &ensp; [` 📦 @rawstyle/vite@0.5.0  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.4.0...@rawstyle/vite@0.5.0)
+
+### &emsp; 🧨 BREAKING CHANGES
+- **Rawstyle dependency update**: the plugin now requires `rawstyle` version `>=0.7` as a peer dependency. [🡥](https://github.com/rawstylecss/rawstyle/commit/2306909)
+- **Switched to Vite peer dependency**: the `rolldown-vite` peer dependency has been replaced with `vite`, reflecting the default Rolldown integration in Vite v8+. [🡥](https://github.com/rawstylecss/rawstyle/commit/f29e09c)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.4.0...@rawstyle/vite@0.5.0) &ensp;•&ensp; Apr 8, 2026
+
+
 ## &ensp; [` 📦 @rawstyle/vite@0.4.0  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.3.2...@rawstyle/vite@0.4.0)
 
 ### &emsp; 🧨 BREAKING CHANGES
