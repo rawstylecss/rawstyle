@@ -35,7 +35,7 @@ jobs:
             $([[ $DIR == "rawstyle" ]] && cp ../../README.md . && echo README.md || true)
           rm -f LICENSE README.md
         working-directory: packages/${{ env.DIR }}
-      - run: npm publish
+      - run: bun pm pack && npm publish *.tgz
         working-directory: packages/${{ env.DIR }}
       - run: gh release create $TAG --title $TAG --draft $ZIP
         working-directory: packages/${{ env.DIR }}
