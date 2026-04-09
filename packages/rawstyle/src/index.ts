@@ -7,7 +7,7 @@ declare global {
 }
 
 export const TRANSFORMABLE_EXT = /\.(tsx|jsx|ts|js)$/
-export const TEMPLATE_PATTERN = /\bcss`(.*?)`/gs
+export const TEMPLATE_PATTERN = /(?<=^[^`]*)\bcss`(.*?)`/gms
 export const VIRTUAL_PREFIX = 'virtual:rawstyle/'
 export const RESOLVED_PREFIX = `\0${VIRTUAL_PREFIX}`
 
