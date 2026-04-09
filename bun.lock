@@ -25,7 +25,7 @@
         "@eslint-react/eslint-plugin": "^4.2.3",
         "@eslint/js": "^10.0.1",
         "@next/eslint-plugin-next": "^16.2.2",
-        "@rawstyle/next": "../../packages/next",
+        "@rawstyle/next": "workspace:*",
         "@stylistic/eslint-plugin": "^5.10.0",
         "@types/bun": "^1.3.11",
         "@types/node": "25.5.2",
@@ -34,7 +34,7 @@
         "eslint": "^10.2.0",
         "eslint-plugin-react-hooks": "^7.0.1",
         "jiti": "^2.6.1",
-        "rawstyle": "../../packages/rawstyle",
+        "rawstyle": "workspace:*",
         "rawstyle-eslint": "^0.2.0",
         "typescript": "^6.0.2",
         "typescript-eslint": "^8.58.0",
@@ -47,14 +47,14 @@
       },
       "devDependencies": {
         "@eslint/js": "^10.0.1",
-        "@rawstyle/vite": "../../packages/vite",
+        "@rawstyle/vite": "workspace:*",
         "@stylistic/eslint-plugin": "^5.10.0",
         "@tsdown/css": "^0.21.7",
         "@types/bun": "^1.3.11",
         "@types/semver": "^7.7.1",
         "eslint": "^10.2.0",
         "jiti": "^2.6.1",
-        "rawstyle": "../../packages/rawstyle",
+        "rawstyle": "workspace:*",
         "tsdown": "^0.21.7",
         "typescript": "^6.0.2",
         "typescript-eslint": "^8.58.0",
@@ -69,7 +69,7 @@
       "devDependencies": {
         "@eslint-react/eslint-plugin": "^4.2.3",
         "@eslint/js": "^10.0.1",
-        "@rawstyle/vite": "../../packages/vite",
+        "@rawstyle/vite": "workspace:*",
         "@stylistic/eslint-plugin": "^5.10.0",
         "@types/bun": "^1.3.11",
         "@types/react": "^19.2.14",
@@ -78,7 +78,7 @@
         "eslint": "^10.2.0",
         "eslint-plugin-react-hooks": "^7.0.1",
         "jiti": "^2.6.1",
-        "rawstyle": "../../packages/rawstyle",
+        "rawstyle": "workspace:*",
         "rawstyle-eslint": "^0.2.0",
         "typescript": "^6.0.2",
         "typescript-eslint": "^8.58.0",
@@ -99,7 +99,7 @@
       "version": "0.5.1",
       "peerDependencies": {
         "next": "*",
-        "rawstyle": "workspace:>=0.6",
+        "rawstyle": "workspace:>=0.7",
       },
     },
     "packages/rawstyle": {
@@ -114,7 +114,7 @@
       "name": "@rawstyle/vite",
       "version": "0.5.1",
       "peerDependencies": {
-        "rawstyle": "workspace:>=0.6",
+        "rawstyle": "workspace:>=0.7",
         "vite": "*",
       },
     },
@@ -790,18 +790,6 @@
 
     "micromatch/picomatch": ["picomatch@2.3.2", "", {}, "sha512-V7+vQEJ06Z+c5tSye8S+nHUfI51xoXIXjHQ99cQtKUkQqqO1kO/KCJUfZXuB47h/YBlDhah2H3hdUGXn8ie0oA=="],
 
-    "rawstyle-next/@rawstyle/next": ["@rawstyle/next@file:packages/next", { "peerDependencies": { "next": "*", "rawstyle": "workspace:>=0.7" } }],
-
-    "rawstyle-next/rawstyle": ["rawstyle@file:packages/rawstyle", { "dependencies": { "@oxc-parser/binding-wasm32-wasi": "^0.124.0", "oxc-parser": "^0.124.0" } }],
-
-    "rawstyle-tsdown/@rawstyle/vite": ["@rawstyle/vite@file:packages/vite", { "peerDependencies": { "rawstyle": "workspace:>=0.7", "vite": "*" } }],
-
-    "rawstyle-tsdown/rawstyle": ["rawstyle@file:packages/rawstyle", { "dependencies": { "@oxc-parser/binding-wasm32-wasi": "^0.124.0", "oxc-parser": "^0.124.0" } }],
-
-    "rawstyle-vite/@rawstyle/vite": ["@rawstyle/vite@file:packages/vite", { "peerDependencies": { "rawstyle": "workspace:>=0.7", "vite": "*" } }],
-
-    "rawstyle-vite/rawstyle": ["rawstyle@file:packages/rawstyle", { "dependencies": { "@oxc-parser/binding-wasm32-wasi": "^0.124.0", "oxc-parser": "^0.124.0" } }],
-
     "rolldown/@oxc-project/types": ["@oxc-project/types@0.122.0", "", {}, "sha512-oLAl5kBpV4w69UtFZ9xqcmTi+GENWOcPF7FCrczTiBbmC0ibXxCwyvZGbO39rCVEuLGAZM84DH0pUIyyv/YJzA=="],
 
     "rolldown/@rolldown/pluginutils": ["@rolldown/pluginutils@1.0.0-rc.12", "", {}, "sha512-HHMwmarRKvoFsJorqYlFeFRzXZqCt2ETQlEDOb9aqssrnVBB1/+xgTGtuTrIk5vzLNX1MjMtTf7W9z3tsSbrxw=="],
@@ -835,12 +823,6 @@
     "@babel/traverse/@babel/types/@babel/helper-string-parser": ["@babel/helper-string-parser@7.27.1", "", {}, "sha512-qMlSxKbpRlAridDExk92nSobyDdpPijUq2DW6oDnUqd0iOGxmQjyqhMIihI9+zv4LPyZdRje2cavWPbCbWm3eA=="],
 
     "@babel/traverse/@babel/types/@babel/helper-validator-identifier": ["@babel/helper-validator-identifier@7.28.5", "", {}, "sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q=="],
-
-    "rawstyle-next/@rawstyle/next/rawstyle": ["rawstyle@file:packages/rawstyle", { "dependencies": { "@oxc-parser/binding-wasm32-wasi": "^0.124.0", "oxc-parser": "^0.124.0" } }],
-
-    "rawstyle-tsdown/@rawstyle/vite/rawstyle": ["rawstyle@file:packages/rawstyle", { "dependencies": { "@oxc-parser/binding-wasm32-wasi": "^0.124.0", "oxc-parser": "^0.124.0" } }],
-
-    "rawstyle-vite/@rawstyle/vite/rawstyle": ["rawstyle@file:packages/rawstyle", { "dependencies": { "@oxc-parser/binding-wasm32-wasi": "^0.124.0", "oxc-parser": "^0.124.0" } }],
 
     "vite/rolldown/@oxc-project/types": ["@oxc-project/types@0.123.0", "", {}, "sha512-YtECP/y8Mj1lSHiUWGSRzy/C6teUKlS87dEfuVKT09LgQbUsBW1rNg+MiJ4buGu3yuADV60gbIvo9/HplA56Ew=="],
 
