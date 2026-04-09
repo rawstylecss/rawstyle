@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 @rawstyle/vite@0.5.1  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.5.0...@rawstyle/vite@0.5.1)
+
+### &emsp; 🩹 Fixes
+- **Fixed published peer dependency**: the published package now resolves the `rawstyle` peer dependency to a regular semver range, so installation no longer fails with workspace lookup errors. [🡥](https://github.com/rawstylecss/rawstyle/commit/1e973f9)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.5.0...@rawstyle/vite@0.5.1) &ensp;•&ensp; Apr 9, 2026
+
+
 ## &ensp; [` 📦 @rawstyle/vite@0.5.0  `](https://github.com/rawstylecss/rawstyle/compare/@rawstyle/vite@0.4.0...@rawstyle/vite@0.5.0)
 
 ### &emsp; 🧨 BREAKING CHANGES
