@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 rawstyle@0.7.1  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.7.0...rawstyle@0.7.1)
+
+### &emsp; 🩹 Fixes
+- **Accurate template parsing**: the compiler no longer incorrectly matches `.css` file extensions or nested `css` tagged templates. [🡥](https://github.com/rawstylecss/rawstyle/commit/217dd89)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.7.0...rawstyle@0.7.1) &ensp;•&ensp; Apr 9, 2026
+
+
 ## &ensp; [` 📦 rawstyle@0.7.0  `](https://github.com/rawstylecss/rawstyle/compare/rawstyle@0.6.0...rawstyle@0.7.0)
 
 ### &emsp; 🧨 BREAKING CHANGES
