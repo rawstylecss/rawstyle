@@ -37,7 +37,7 @@
         "rawstyle": "workspace:*",
         "rawstyle-eslint": "^0.2.0",
         "typescript": "^6.0.2",
-        "typescript-eslint": "^8.58.0",
+        "typescript-eslint": "^8.58.1",
       },
     },
     "examples/tsdown": {
@@ -57,7 +57,7 @@
         "rawstyle": "workspace:*",
         "tsdown": "^0.21.7",
         "typescript": "^6.0.2",
-        "typescript-eslint": "^8.58.0",
+        "typescript-eslint": "^8.58.1",
       },
     },
     "examples/vite": {
@@ -81,7 +81,7 @@
         "rawstyle": "workspace:*",
         "rawstyle-eslint": "^0.2.0",
         "typescript": "^6.0.2",
-        "typescript-eslint": "^8.58.0",
+        "typescript-eslint": "^8.58.1",
         "vite": "^8.0.7",
       },
     },
