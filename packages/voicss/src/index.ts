@@ -1,0 +1,1 @@
+export const extractCss = (s: string) => [...s.matchAll(/void `css\s(.*?)`/gs)].map(m => m[1]).join('')
