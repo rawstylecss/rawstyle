@@ -1,0 +1,26 @@
+{
+	"name": "voicss-tsdown",
+	"description": "🧩 Voicss + tsdown Template",
+	"type": "module",
+	"scripts": {
+		"build": "tsdown",
+		"build:watch": "tsdown -w",
+		"build:prod": "tsdown -p",
+		"lint": "eslint",
+		"typecheck": "tsc",
+		"release": "bunx relion"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@voicss/vite": "workspace:*",
+		"@stylistic/eslint-plugin": "^5.10.0",
+		"@tsdown/css": "^0.21.7",
+		"@types/bun": "^1.3.12",
+		"eslint": "^10.2.0",
+		"jiti": "^2.6.1",
+		"voicss": "workspace:*",
+		"tsdown": "^0.21.7",
+		"typescript": "^6.0.2",
+		"typescript-eslint": "^8.58.1"
+	}
+}
