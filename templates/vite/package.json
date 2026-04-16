@@ -28,7 +28,7 @@
 		"jiti": "^2.6.1",
 		"voicss": "workspace:*",
 		"typescript": "^6.0.2",
-		"typescript-eslint": "^8.58.1",
+		"typescript-eslint": "^8.58.2",
 		"vite": "^8.0.8"
 	}
 }
