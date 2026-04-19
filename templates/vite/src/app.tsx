@@ -3,13 +3,12 @@ export default function App() {
 }
 
 void `css
-	.title {
-		font-size: 14rem;
-		font-family: "Tiny5", sans-serif;
-		color: var(--foreground);
-		text-align: center;
-		text-transform: uppercase;
-		letter-spacing: -1rem;
-		line-height: 0.7;
-	}
-`
+.title {
+	font-size: 14rem;
+	font-family: 'Tiny5', sans-serif;
+	color: var(--foreground);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: -1rem;
+	line-height: 0.7;
+}`
