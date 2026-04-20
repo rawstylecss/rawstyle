@@ -29,7 +29,7 @@
 		"@voicss/eslint": "^0.2.0",
 		"@voicss/next": "workspace:*",
 		"eslint": "^10.2.0",
-		"eslint-plugin-react-hooks": "^7.0.1",
+		"eslint-plugin-react-hooks": "^7.1.0",
 		"jiti": "^2.6.1",
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.58.2",
