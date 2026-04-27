@@ -1,5 +1,5 @@
 <div align="center">
-	<img alt="logo" src="https://raw.githubusercontent.com/voicss/voicss/refs/heads/assets/logo.svg">
+	<img alt="logo" src="https://raw.githubusercontent.com/voicss/voicss/refs/heads/assets/logo.png">
 	<br>
 	A lightweight compile-time <b>CSS-in-TS library</b> for React
 	<br><br>
